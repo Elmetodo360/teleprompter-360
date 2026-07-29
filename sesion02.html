@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Teleprompter 360 - Sesion 02</title>
+<style>
+  :root{
+    --carbon:#0E0E10; --dorado:#E1A730; --crema:#EDE9E3; --burdeos:#A32834;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%;background:var(--carbon);color:var(--crema);
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;overflow:hidden}
+
+  /* ---------- PANTALLA DE CARGA ---------- */
+  #carga{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;gap:18px;padding:24px;overflow-y:auto;z-index:30}
+  #carga h1{font-size:clamp(26px,5vw,40px);font-weight:800;letter-spacing:.5px}
+  #carga h1 span{color:var(--dorado)}
+  #carga p{color:#9a968f;font-size:15px;text-align:center;max-width:520px;line-height:1.5}
+  #zona{border:2px dashed #3a3a40;border-radius:14px;padding:28px 34px;text-align:center;
+    cursor:pointer;transition:border-color .2s;max-width:520px;width:100%}
+  #zona.arrastre,#zona:hover{border-color:var(--dorado)}
+  #zona strong{color:var(--dorado)}
+  #pegar{width:100%;max-width:520px;height:130px;background:#17171a;color:var(--crema);
+    border:1px solid #3a3a40;border-radius:10px;padding:12px;font-size:15px;resize:vertical}
+  .btn{background:var(--burdeos);color:#fff;border:none;border-radius:10px;
+    padding:14px 30px;font-size:17px;font-weight:700;cursor:pointer}
+  .btn:disabled{opacity:.35;cursor:default}
+  .btn-sec{background:#26262b;color:var(--crema)}
+  #ultimo{display:none}
+  .ayuda{font-size:13px;color:#6d6a64;text-align:center;max-width:520px;line-height:1.6}
+
+  /* ---------- MENÚ DE GUIONES ---------- */
+  #menu{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;
+    justify-content:center;gap:12px;padding:24px;overflow-y:auto;z-index:25}
+  #menu h2{font-size:22px;margin-bottom:6px}
+  .gbtn{width:100%;max-width:560px;text-align:left;background:#17171a;border:1px solid #3a3a40;
+    color:var(--crema);border-radius:10px;padding:14px 18px;font-size:16px;cursor:pointer}
+  .gbtn:hover{border-color:var(--dorado)}
+  .gbtn small{color:#8a867f;display:block;margin-top:3px}
+
+  /* ---------- PROMPTER ---------- */
+  #prompter{position:fixed;inset:0;display:none;z-index:10}
+  #scroller{position:absolute;inset:0;overflow:hidden;cursor:pointer}
+  #texto{padding:45vh 6vw 65vh 6vw;font-weight:600;line-height:1.55;will-change:transform;
+    white-space:pre-wrap;word-wrap:break-word}
+  #texto .tit{color:var(--dorado);font-weight:800;display:block;margin:0 0 .6em 0}
+  #linea{position:absolute;left:0;right:0;top:42vh;height:0;border-top:2px solid rgba(225,167,48,.45);
+    pointer-events:none}
+  #linea::before{content:"";position:absolute;left:6px;top:-7px;border:7px solid transparent;
+    border-left-color:var(--dorado)}
+
+  /* HUD */
+  #hud{position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:8px;
+    justify-content:center;align-items:center;padding:10px 8px calc(10px + env(safe-area-inset-bottom));
+    background:linear-gradient(transparent,rgba(14,14,16,.92) 40%);z-index:15;transition:opacity .3s}
+  #hud.oculto{opacity:0;pointer-events:none}
+  .hbtn{background:#1d1d21;border:1px solid #3a3a40;color:var(--crema);border-radius:9px;
+    min-width:46px;height:46px;font-size:17px;font-weight:700;cursor:pointer;padding:0 12px}
+  .hbtn:active{border-color:var(--dorado)}
+  #play{background:var(--burdeos);border-color:var(--burdeos);min-width:78px;font-size:16px}
+  .hval{font-size:13px;color:#9a968f;min-width:56px;text-align:center;line-height:1.2}
+  .hval b{color:var(--crema);font-size:15px;display:block}
+</style>
+</head>
+<body>
+
+<!-- CARGA -->
+<div id="carga">
+  <h1>Teleprompter <span>360</span></h1>
+  <p>Carga un archivo <strong>.txt</strong> con tu guion o pega el texto abajo. Funciona en el ordenador y en el móvil, sin instalar nada.</p>
+  <div id="zona">
+    <strong>Toca aquí para elegir un .txt</strong><br>o arrástralo a esta zona
+    <input type="file" id="fichero" accept=".txt,text/plain" hidden>
+  </div>
+  <textarea id="pegar" placeholder="…o pega aquí el texto del guion"></textarea>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+    <button class="btn" id="empezar" disabled>Empezar</button>
+    <button class="btn btn-sec" id="ultimo">Abrir el último guion</button>
+  </div>
+  <p class="ayuda">Varios guiones en un mismo .txt: separa cada uno con una línea que empiece por <strong>###</strong> seguida del título (por ejemplo «### Guion 1 — La queja»). Verás un menú para elegir.<br>
+  Dentro del prompter: toca la pantalla o pulsa espacio para arrancar y parar. Flechas arriba/abajo: velocidad. La línea dorada marca por dónde vas leyendo.</p>
+</div>
+
+<!-- MENÚ -->
+<div id="menu">
+  <h2>Elige guion</h2>
+  <div id="lista" style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:560px;align-items:stretch"></div>
+  <button class="btn btn-sec" id="volverCarga" style="margin-top:10px">Cargar otro texto</button>
+</div>
+
+<!-- PROMPTER -->
+<div id="prompter">
+  <div id="scroller"><div id="texto"></div></div>
+  <div id="linea"></div>
+  <div id="hud">
+    <button class="hbtn" id="salir" title="Volver">&#8592;</button>
+    <button class="hbtn" id="menos" title="Más despacio">&minus;</button>
+    <div class="hval">velocidad<b id="vvel">42</b></div>
+    <button class="hbtn" id="mas" title="Más deprisa">+</button>
+    <button class="hbtn" id="play">&#9654; Ir</button>
+    <button class="hbtn" id="fmenos" title="Letra más pequeña">A&minus;</button>
+    <div class="hval">letra<b id="vfs">40</b></div>
+    <button class="hbtn" id="fmas" title="Letra más grande">A+</button>
+    <button class="hbtn" id="rebobinar" title="Volver al principio">&#8634;</button>
+    <button class="hbtn" id="espejo" title="Modo espejo">&#8646;</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var guiones=[], actual=0;
+  var velocidad=42, fuente=40, corriendo=false, raf=null, pos=0, mirrored=false, prevTs=0;
+  var wakeLock=null, tHud=null;
+
+  var $=function(id){return document.getElementById(id)};
+  var texto=$('texto'), scroller=$('scroller'), hud=$('hud');
+
+  /* ---- persistencia ---- */
+  try{
+    var cfg=JSON.parse(localStorage.getItem('tp360_cfg')||'{}');
+    if(cfg.v) velocidad=cfg.v; if(cfg.f) fuente=cfg.f;
+    if(localStorage.getItem('tp360_txt')) $('ultimo').style.display='inline-block';
+  }catch(e){}
+  function guardaCfg(){ try{localStorage.setItem('tp360_cfg',JSON.stringify({v:velocidad,f:fuente}))}catch(e){} }
+
+  /* ---- carga ---- */
+  var zona=$('zona'), fichero=$('fichero'), pegar=$('pegar'), empezar=$('empezar');
+  zona.addEventListener('click',function(){fichero.click()});
+  zona.addEventListener('dragover',function(e){e.preventDefault();zona.classList.add('arrastre')});
+  zona.addEventListener('dragleave',function(){zona.classList.remove('arrastre')});
+  zona.addEventListener('drop',function(e){
+    e.preventDefault(); zona.classList.remove('arrastre');
+    if(e.dataTransfer.files[0]) leeFichero(e.dataTransfer.files[0]);
+  });
+  fichero.addEventListener('change',function(){ if(fichero.files[0]) leeFichero(fichero.files[0]) });
+  function leeFichero(f){
+    var r=new FileReader();
+    r.onload=function(){ pegar.value=r.result; empezar.disabled=false; procesa(r.result); };
+    r.readAsText(f,'UTF-8');
+  }
+  pegar.addEventListener('input',function(){ empezar.disabled=!pegar.value.trim() });
+  empezar.addEventListener('click',function(){ procesa(pegar.value) });
+  $('ultimo').addEventListener('click',function(){
+    var t=localStorage.getItem('tp360_txt'); if(t){ pegar.value=t; procesa(t); }
+  });
+
+  /* ---- parseo: bloques ### Título ---- */
+  function procesa(raw){
+    raw=raw.replace(/\r\n/g,'\n').trim();
+    if(!raw) return;
+    try{localStorage.setItem('tp360_txt',raw)}catch(e){}
+    guiones=[];
+    var partes=raw.split(/^###[ \t]*/m);
+    if(partes.length>1 && partes[0].trim()==='') partes.shift();
+    if(partes.length>1 || /^###/m.test(raw)){
+      partes.forEach(function(p){
+        p=p.trim(); if(!p) return;
+        var nl=p.indexOf('\n');
+        if(nl===-1){ guiones.push({t:p,c:''}) }
+        else guiones.push({t:p.slice(0,nl).trim(), c:p.slice(nl+1).trim()});
+      });
+    }
+    if(guiones.length<=1){
+      guiones=[{t:'',c:raw.replace(/^###[ \t]*/,'')}];
+      abrir(0); return;
+    }
+    pintaMenu();
+  }
+  function pintaMenu(){
+    var lista=$('lista'); lista.innerHTML='';
+    guiones.forEach(function(g,i){
+      var b=document.createElement('button'); b.className='gbtn';
+      var palabras=g.c.split(/\s+/).filter(Boolean).length;
+      var seg=Math.round(palabras/150*60);
+      b.innerHTML='<span>'+esc(g.t||('Guion '+(i+1)))+'</span><small>'+palabras+' palabras · ~'+seg+' s a 150 ppm</small>';
+      b.onclick=function(){abrir(i)};
+      lista.appendChild(b);
+    });
+    $('carga').style.display='none';
+    $('menu').style.display='flex';
+  }
+  $('volverCarga').addEventListener('click',function(){
+    $('menu').style.display='none'; $('carga').style.display='flex';
+  });
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+
+  /* ---- prompter ---- */
+  function abrir(i){
+    actual=i;
+    var g=guiones[i];
+    texto.innerHTML=(g.t?'<span class="tit">'+esc(g.t)+'</span>':'')+esc(g.c);
+    $('carga').style.display='none'; $('menu').style.display='none';
+    $('prompter').style.display='block';
+    pos=0; aplicaFuente(); aplica(); pinta(); parar();
+    pideWake(); muestraHud();
+  }
+  function aplica(){ texto.style.transform='translateY('+(-pos)+'px) scaleX('+(mirrored?-1:1)+')'; }
+  function aplicaFuente(){ texto.style.fontSize=fuente+'px'; }
+  function pinta(){ $('vvel').textContent=velocidad; $('vfs').textContent=fuente; }
+
+  function paso(ts){
+    if(!corriendo) return;
+    if(!prevTs) prevTs=ts;
+    var dt=(ts-prevTs)/1000; prevTs=ts;
+    pos+=velocidad*dt;
+    var max=texto.scrollHeight;
+    if(pos>max){ parar(); return; }
+    aplica();
+    raf=requestAnimationFrame(paso);
+  }
+  function arrancar(){
+    corriendo=true; prevTs=0;
+    $('play').innerHTML='&#10073;&#10073;';
+    raf=requestAnimationFrame(paso);
+    clearTimeout(tHud); tHud=setTimeout(function(){hud.classList.add('oculto')},1500);
+  }
+  function parar(){
+    corriendo=false; if(raf) cancelAnimationFrame(raf);
+    $('play').innerHTML='&#9654; Ir';
+    muestraHud();
+  }
+  function toggle(){ corriendo?parar():arrancar(); }
+  function muestraHud(){ hud.classList.remove('oculto'); clearTimeout(tHud);
+    if(corriendo) tHud=setTimeout(function(){hud.classList.add('oculto')},1500); }
+
+  scroller.addEventListener('click',function(){ toggle(); });
+  $('play').addEventListener('click',function(e){ e.stopPropagation(); toggle(); });
+  $('mas').addEventListener('click',function(e){e.stopPropagation(); velocidad=Math.min(160,velocidad+4); pinta(); guardaCfg(); muestraHud();});
+  $('menos').addEventListener('click',function(e){e.stopPropagation(); velocidad=Math.max(8,velocidad-4); pinta(); guardaCfg(); muestraHud();});
+  $('fmas').addEventListener('click',function(e){e.stopPropagation(); fuente=Math.min(80,fuente+2); aplicaFuente(); pinta(); guardaCfg(); muestraHud();});
+  $('fmenos').addEventListener('click',function(e){e.stopPropagation(); fuente=Math.max(20,fuente-2); aplicaFuente(); pinta(); guardaCfg(); muestraHud();});
+  $('rebobinar').addEventListener('click',function(e){e.stopPropagation(); parar(); pos=0; aplica();});
+  $('espejo').addEventListener('click',function(e){e.stopPropagation(); mirrored=!mirrored; aplica();});
+  $('salir').addEventListener('click',function(e){
+    e.stopPropagation(); parar();
+    $('prompter').style.display='none';
+    if(guiones.length>1){ $('menu').style.display='flex' } else { $('carga').style.display='flex' }
+    sueltaWake();
+  });
+
+  document.addEventListener('keydown',function(e){
+    if($('prompter').style.display!=='block') return;
+    if(e.code==='Space'){ e.preventDefault(); toggle(); }
+    else if(e.code==='ArrowUp'){ e.preventDefault(); velocidad=Math.min(160,velocidad+4); pinta(); guardaCfg(); muestraHud(); }
+    else if(e.code==='ArrowDown'){ e.preventDefault(); velocidad=Math.max(8,velocidad-4); pinta(); guardaCfg(); muestraHud(); }
+    else if(e.code==='Home'){ parar(); pos=0; aplica(); }
+    else if(e.code==='Escape'){ $('salir').click(); }
+  });
+
+  /* pantalla siempre encendida */
+  function pideWake(){
+    if('wakeLock' in navigator){
+      navigator.wakeLock.request('screen').then(function(w){wakeLock=w}).catch(function(){});
+    }
+  }
+  function sueltaWake(){ if(wakeLock){ wakeLock.release().catch(function(){}); wakeLock=null; } }
+  document.addEventListener('visibilitychange',function(){
+    if(document.visibilityState==='visible' && $('prompter').style.display==='block') pideWake();
+  });
+
+  /* --- guiones precargados: Sesion 02 --- */
+  var PRE=`### Guion 7 — Servicio vs hospitalidad en un menú de 14 €
+
+[HOOK]
+El menú de catorce euros no compite en precio. Compite en cómo tratas a la gente.
+
+[BUILD]
+Porque servicio y hospitalidad no son lo mismo. Servicio es traer el plato caliente y a tiempo: eso lo hace cualquiera que haga bien su trabajo. Hospitalidad es que el cliente sienta que le estaban esperando: que le llames por su nombre, que te acuerdes de que no toma gluten, que le guardes su mesa de siempre. En tu calle todos dan de comer por catorce euros. El que llena todos los días no es el más barato: es aquel donde te reciben como a alguien de casa.
+
+[REGLA + REMATE + CTA]
+La regla es simple: cada mesa, un gesto. Uno. El plato lo paga el cliente. El gesto te lo devuelve la fidelidad. Sígueme, que de esto hablo todos los días.
+
+### Guion 8 — El ratio de personal que casi todos calculan mal
+
+[HOOK]
+El ratio de personal de tu local está mal calculado. Casi seguro.
+
+[BUILD]
+Y te digo por qué: porque estás metiendo tu sueldo de gestión dentro. Y la gestión no es coste de personal, es otra partida. Para saber si tu plantilla está bien dimensionada, la cuenta es esta: plantilla más extras, dividido entre lo que vendes. Solo eso. Con la gestión dentro, el número te sale inflado y tomas decisiones equivocadas: recortas camareros cuando el problema está en otro sitio.
+
+[CIFRA]
+Y una referencia para situarte: en torno al treinta por ciento, respiras. Por encima del treinta y cinco, tienes un problema que no se arregla metiendo más horas tú.
+
+[REMATE + CTA]
+Haz la cuenta esta semana con los números del mes pasado. Plantilla más extras, entre lo vendido. Y guárdate este vídeo para hacerla.
+
+### Guion 9 — Me escribió un hostelero (cap. 2): queremos aumentar ventas
+
+[HOOK, a cámara]
+Me escribió un hostelero. Tres palabras: queremos aumentar ventas.
+
+[LECTURA, leyendo el móvil]
+Un asador familiar en Burgos. Me dice: el local va bien de gente, pero no llegamos. Queremos aumentar ventas. ¿Hacemos publicidad?
+
+[RESPUESTA, a cámara]
+Pues os voy a decir una cosa: antes de meter un euro en publicidad, mira cuánto te queda de lo que ya vendes. Porque si tu margen está roto, vender más es repetir la pérdida más veces. Un local lleno que no llega a fin de mes no tiene un problema de ventas: tiene un problema de escandallo, de merma o de horas. Primero se arregla la cuenta de dentro. Después, y solo después, se llena más el comedor.
+
+[REMATE + CTA]
+Querer vender más no es un plan. Saber cuánto te deja cada venta, sí. Si tienes un local y quieres que responda el tuyo, cuéntamelo por DM.
+
+### Guion 10 — El mes que descubrí 1.200 € de merma (confesional)
+
+[HOOK]
+Un mes descubrí mil doscientos euros de merma en mi propia cocina. Mía. Con veinte años de oficio.
+
+[BUILD]
+Y no era robo, ni un desastre de cámara. Era el goteo de siempre: el perejil que se seca, la nata abierta del viernes, el pan que sobra, la ración que se monta grande. Nada de eso sale en ninguna cuenta, pero lo había pagado yo. ¿Cómo lo descubrí? Con un cuaderno en cocina: todo lo que se tira, apuntado con producto y cantidad. La primera semana ya dolía. Al mes, mil doscientos euros.
+
+[REMATE + CTA]
+Lo que se tira no aparece en ninguna factura, pero lo has pagado tú. Pon el cuaderno esta semana y luego me cuentas. Sígueme, que de esto hablo todos los días.
+
+### Guion 11 — Proveedores: la culpa era mía
+
+[HOOK]
+Llevaba años pagando de más a mis proveedores. Y la culpa no era suya: era mía.
+
+[BUILD]
+Porque nunca comparaba. Al proveedor de toda la vida no se le discute, se le paga. Hasta que un día pedí precio del mismo género a otros dos... y el mismo lomo tenía tres precios distintos en la misma calle. Desde entonces, dos reglas: dos proveedores por familia de producto, siempre. Y los precios se revisan cada temporada, no cuando me acuerdo. Y ojo, esto no es pelearse con nadie: es preguntar. En carne y pescado, un cinco por ciento de la compra son cientos de euros al mes.
+
+[REMATE + CTA]
+Esta semana, pide precio a un segundo proveedor de tu partida más gorda. Con eso empiezas. Sígueme, que de números hablo todos los días.
+
+### Guion 12 — Tres cierres de caja sin saber si ganaste
+
+[HOOK]
+Tres cierres de caja seguidos sin saber si habías ganado dinero. Yo he estado ahí.
+
+[BUILD]
+Porque la caja llena engaña. La caja te dice cuánto entró, no cuánto ganaste. Hasta que no le restas el género, las nóminas, el alquiler y la luz, ese montón de billetes no significa nada. Y esa cuenta casi nadie la hace a diario. La solución cabe en un papel: cada noche, cuatro números. Lo vendido, lo comprado hoy, las horas trabajadas y una línea de incidencias. Cinco minutos con el local ya cerrado.
+
+[REMATE + CTA]
+Un mes con ese papel y sabrás de tu negocio más que en el último año entero. Guárdate este vídeo para el cierre de esta noche.
+
+### Guion 13 — Chick-fil-A cierra los domingos
+
+[HOOK]
+La cadena de pollo más rentable de Estados Unidos cierra todos los domingos. Y aun así vende más por local que McDonald's.
+
+[BUILD]
+Se llama Chick-fil-A. Cierra uno de cada siete días y factura por restaurante más que nadie. ¿Y cómo puede ser? Equipos que descansan, gente que no se va, servicio que no falla. La rotación baja se paga sola. ¿Y qué copiaría yo para un bar de aquí? No el cerrar en domingo: el proteger el descanso. Cuadrantes que se cumplen, dos días seguidos de libranza cuando se pueda, y el festivo trabajado, devuelto.
+
+[REMATE + CTA]
+Un equipo descansado te vende más que una hora extra. Guárdalo para cuando hagas el cuadrante de agosto.
+
+### Guion 14 — Mercadona: cuatro semanas antes de tocar caja
+
+[HOOK]
+Mercadona no deja a nadie tocar una caja sin cuatro semanas de formación. En hostelería metemos al nuevo un viernes por la noche.
+
+[BUILD]
+Y luego nos quejamos de que el chaval falla. Pues claro que falla: nadie le ha enseñado la carta, ni las mesas, ni el TPV, ni quién manda en el pase. Y cada fallo suyo lo paga tu servicio entero: comandas mal metidas, ritmo roto, cliente quemado. No te hacen falta cuatro semanas como a Mercadona. Te hacen falta dos días con método: un día de carta y TPV, un día de sala pegado al mejor que tengas.
+
+[REMATE + CTA]
+El nuevo no te sale caro por su nómina: te sale caro sin formar. Guárdalo para la próxima incorporación.
+
+### Guion 15 — La pregunta del cajero de Trader Joe's
+
+[HOOK]
+Hay un supermercado americano donde el cajero te pregunta qué vas a cenar. Y esa pregunta vale millones.
+
+[BUILD]
+Se llama Trader Joe's, y entrena a su gente para conversar en caja: qué plan tienes, prueba esto con aquello. No es simpatía: es una pregunta diseñada, entrenada y repetida. ¿Y la versión de un restaurante de aquí? El camarero que pregunta "¿lo queréis para compartir?" o "¿os saco unas croquetas mientras miráis la carta?". Una pregunta por puesto, decidida antes del servicio. No diez: una.
+
+[REMATE + CTA]
+Una pregunta bien entrenada factura más que la pizarra de ofertas. Decide la de tu casa hoy en el briefing y enséñale este vídeo a tu equipo.
+
+### Guion 16 — La cuenta de una baja
+
+[HOOK]
+Cada camarero que se te va te cuesta más de mil euros. Aunque no lo veas en ninguna factura.
+
+[BUILD]
+Haz la cuenta conmigo: el anuncio y las entrevistas, tus horas. Las semanas de rodaje a medio ritmo. Los errores del nuevo, que los paga el cliente. Y el equipo, cargando el hueco mientras tanto. En España la rotación en hostelería pasa del sesenta por ciento: es la sangría más cara del oficio y no sale en ningún papel. Y retener no siempre es pagar más: es cuadrante estable, descanso que se respeta y saber a quién respondes.
+
+[REMATE + CTA]
+Sustituir es más caro que cuidar. Guárdate este vídeo para la próxima vez que pienses "ya vendrá otro".
+
+### Guion 17 — La escena de The Bear que explica el pase
+
+[HOOK]
+Hay una escena de The Bear que explica el pase mejor que cualquier curso. Te la cuento.
+
+[BUILD]
+La cocina es un caos: gritos, platos que vuelven, todo el mundo corriendo y nadie avanzando. ¿Y qué lo arregla? No es correr más. Es que cada uno tenga su puesto y una sola voz cante la comanda. Oído. Y eso no es cosa de estrellas Michelin: en un bar de menús pasa igual. Quién canta la comanda, quién monta el plato, quién lo saca. Tres papeles con nombre. Cuando eso existe, el mismo equipo que ayer se gritaba, hoy fluye.
+
+[REMATE + CTA]
+Veinte años de pase me han enseñado lo mismo que esa escena: el caos no se arregla corriendo, se arregla cantando. Sígueme, que de esto hablo todos los días.
+
+### Guion 18 — El cliente difícil no se gestiona con paciencia
+
+[HOOK]
+El cliente difícil no se gestiona con paciencia. Se gestiona con sistema.
+
+[BUILD]
+Porque tu camarero nuevo no puede improvisar delante de uno que viene a discutir. En mi casa la regla tiene tres pasos y se sabe antes del servicio. Uno: se escucha entero, sin interrumpir y sin justificarse. Dos: si la cosa sube, va el de los galones: el encargado o el dueño, no el chaval. Y tres: el equipo sabe hasta dónde puede decidir. Si puede invitar a un café para cerrar un mal trago, que lo sepa antes del servicio, no durante.
+
+[REMATE + CTA]
+Al difícil no se le gana discutiendo: se le gana teniendo un plan. Enséñale este vídeo a tu equipo antes del próximo turno.
+
+### Guion 19 — Tu local no falla por malo: falla por irregular
+
+[HOOK]
+Tu local no está fallando por malo. Está fallando por irregular.
+
+[BUILD]
+El martes bordas el servicio y el viernes se te cae. Y el cliente no vuelve al sitio del martes: deja de volver por el viernes. La regularidad no es suerte, se fabrica con tres cosas: ficha de cada plato, para que salga igual lo haga quien lo haga. Pase definido, para que el ritmo no dependa de quién trabaje hoy. Y briefing de cinco minutos antes de cada servicio. Lo brillante trae la primera visita; lo regular trae todas las demás.
+
+[REMATE + CTA]
+No busques el mejor servicio de tu vida: busca el mismo servicio todos los días. Sígueme, que de esto hablo todos los días.
+
+### Guion 20 — Tu mejor camarero no se va por el sueldo
+
+[HOOK]
+Tu mejor camarero no se va por el sueldo. Se va por aguantar al que trabaja mal a su lado.
+
+[BUILD]
+Piénsalo: el bueno llega puntual, saca sus mesas y encima tapa los agujeros del flojo. Y si al flojo no le pasa nada, el mensaje que recibe el bueno es que aquí da igual hacerlo bien. Cada turno que el flojo sale gratis, el bueno actualiza el currículum. Pedir cuentas no es montar una bronca: es que el trabajo mal hecho tenga una conversación esa misma semana. A solas, con hechos y con fecha para corregirlo.
+
+[REMATE + CTA]
+Al bueno se le cuida pidiéndole cuentas al flojo. Guárdate este vídeo para antes de hacer el próximo cuadrante.
+
+### Guion 21 — El asador que bajó personal del 38 al 31
+
+[HOOK]
+Un asador bajó su gasto de personal del treinta y ocho al treinta y uno por ciento de la venta. Sin despedir a nadie.
+
+[BUILD]
+Un caso real del norte. ¿Y cuál fue la palanca? No fue echar gente: fue cuadrar horas con venta. Cuadrantes por franjas, porque no necesitas el mismo equipo un martes a las cinco que un sábado a las dos. Extras solo cuando hay reserva que los pague. Y la gestión, fuera del ratio, que esa es otra partida. Siete puntos sobre la venta, en un local normal, son decenas de miles de euros al año. Sin tocar la calidad y sin quemar a nadie.
+
+[REMATE + CTA]
+El personal no se recorta: se cuadra. Guárdate este vídeo para hacer tus cuadrantes por franjas.
+`;
+  procesa(PRE);
+})();
+</script>
+</body>
+</html>
