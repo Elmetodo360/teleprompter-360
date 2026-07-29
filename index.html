@@ -1,1 +1,265 @@
-__FILE__
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Teleprompter 360</title>
+<style>
+  :root{
+    --carbon:#0E0E10; --dorado:#E1A730; --crema:#EDE9E3; --burdeos:#A32834;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%;background:var(--carbon);color:var(--crema);
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;overflow:hidden}
+
+  /* ---------- PANTALLA DE CARGA ---------- */
+  #carga{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;gap:18px;padding:24px;overflow-y:auto;z-index:30}
+  #carga h1{font-size:clamp(26px,5vw,40px);font-weight:800;letter-spacing:.5px}
+  #carga h1 span{color:var(--dorado)}
+  #carga p{color:#9a968f;font-size:15px;text-align:center;max-width:520px;line-height:1.5}
+  #zona{border:2px dashed #3a3a40;border-radius:14px;padding:28px 34px;text-align:center;
+    cursor:pointer;transition:border-color .2s;max-width:520px;width:100%}
+  #zona.arrastre,#zona:hover{border-color:var(--dorado)}
+  #zona strong{color:var(--dorado)}
+  #pegar{width:100%;max-width:520px;height:130px;background:#17171a;color:var(--crema);
+    border:1px solid #3a3a40;border-radius:10px;padding:12px;font-size:15px;resize:vertical}
+  .btn{background:var(--burdeos);color:#fff;border:none;border-radius:10px;
+    padding:14px 30px;font-size:17px;font-weight:700;cursor:pointer}
+  .btn:disabled{opacity:.35;cursor:default}
+  .btn-sec{background:#26262b;color:var(--crema)}
+  #ultimo{display:none}
+  .ayuda{font-size:13px;color:#6d6a64;text-align:center;max-width:520px;line-height:1.6}
+
+  /* ---------- MENÚ DE GUIONES ---------- */
+  #menu{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;
+    justify-content:center;gap:12px;padding:24px;overflow-y:auto;z-index:25}
+  #menu h2{font-size:22px;margin-bottom:6px}
+  .gbtn{width:100%;max-width:560px;text-align:left;background:#17171a;border:1px solid #3a3a40;
+    color:var(--crema);border-radius:10px;padding:14px 18px;font-size:16px;cursor:pointer}
+  .gbtn:hover{border-color:var(--dorado)}
+  .gbtn small{color:#8a867f;display:block;margin-top:3px}
+
+  /* ---------- PROMPTER ---------- */
+  #prompter{position:fixed;inset:0;display:none;z-index:10}
+  #scroller{position:absolute;inset:0;overflow:hidden;cursor:pointer}
+  #texto{padding:45vh 6vw 65vh 6vw;font-weight:600;line-height:1.55;will-change:transform;
+    white-space:pre-wrap;word-wrap:break-word}
+  #texto .tit{color:var(--dorado);font-weight:800;display:block;margin:0 0 .6em 0}
+  #linea{position:absolute;left:0;right:0;top:42vh;height:0;border-top:2px solid rgba(225,167,48,.45);
+    pointer-events:none}
+  #linea::before{content:"";position:absolute;left:6px;top:-7px;border:7px solid transparent;
+    border-left-color:var(--dorado)}
+
+  /* HUD */
+  #hud{position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:8px;
+    justify-content:center;align-items:center;padding:10px 8px calc(10px + env(safe-area-inset-bottom));
+    background:linear-gradient(transparent,rgba(14,14,16,.92) 40%);z-index:15;transition:opacity .3s}
+  #hud.oculto{opacity:0;pointer-events:none}
+  .hbtn{background:#1d1d21;border:1px solid #3a3a40;color:var(--crema);border-radius:9px;
+    min-width:46px;height:46px;font-size:17px;font-weight:700;cursor:pointer;padding:0 12px}
+  .hbtn:active{border-color:var(--dorado)}
+  #play{background:var(--burdeos);border-color:var(--burdeos);min-width:78px;font-size:16px}
+  .hval{font-size:13px;color:#9a968f;min-width:56px;text-align:center;line-height:1.2}
+  .hval b{color:var(--crema);font-size:15px;display:block}
+</style>
+</head>
+<body>
+
+<!-- CARGA -->
+<div id="carga">
+  <h1>Teleprompter <span>360</span></h1>
+  <p>Carga un archivo <strong>.txt</strong> con tu guion o pega el texto abajo. Funciona en el ordenador y en el móvil, sin instalar nada.</p>
+  <div id="zona">
+    <strong>Toca aquí para elegir un .txt</strong><br>o arrástralo a esta zona
+    <input type="file" id="fichero" accept=".txt,text/plain" hidden>
+  </div>
+  <textarea id="pegar" placeholder="…o pega aquí el texto del guion"></textarea>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+    <button class="btn" id="empezar" disabled>Empezar</button>
+    <button class="btn btn-sec" id="ultimo">Abrir el último guion</button>
+  </div>
+  <p class="ayuda">Varios guiones en un mismo .txt: separa cada uno con una línea que empiece por <strong>###</strong> seguida del título (por ejemplo «### Guion 1 — La queja»). Verás un menú para elegir.<br>
+  Dentro del prompter: toca la pantalla o pulsa espacio para arrancar y parar. Flechas arriba/abajo: velocidad. La línea dorada marca por dónde vas leyendo.</p>
+</div>
+
+<!-- MENÚ -->
+<div id="menu">
+  <h2>Elige guion</h2>
+  <div id="lista" style="display:flex;flex-direction:column;gap:10px;width:100%;max-width:560px;align-items:stretch"></div>
+  <button class="btn btn-sec" id="volverCarga" style="margin-top:10px">Cargar otro texto</button>
+</div>
+
+<!-- PROMPTER -->
+<div id="prompter">
+  <div id="scroller"><div id="texto"></div></div>
+  <div id="linea"></div>
+  <div id="hud">
+    <button class="hbtn" id="salir" title="Volver">&#8592;</button>
+    <button class="hbtn" id="menos" title="Más despacio">&minus;</button>
+    <div class="hval">velocidad<b id="vvel">42</b></div>
+    <button class="hbtn" id="mas" title="Más deprisa">+</button>
+    <button class="hbtn" id="play">&#9654; Ir</button>
+    <button class="hbtn" id="fmenos" title="Letra más pequeña">A&minus;</button>
+    <div class="hval">letra<b id="vfs">40</b></div>
+    <button class="hbtn" id="fmas" title="Letra más grande">A+</button>
+    <button class="hbtn" id="rebobinar" title="Volver al principio">&#8634;</button>
+    <button class="hbtn" id="espejo" title="Modo espejo">&#8646;</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var guiones=[], actual=0;
+  var velocidad=42, fuente=40, corriendo=false, raf=null, pos=0, mirrored=false, prevTs=0;
+  var wakeLock=null, tHud=null;
+
+  var $=function(id){return document.getElementById(id)};
+  var texto=$('texto'), scroller=$('scroller'), hud=$('hud');
+
+  /* ---- persistencia ---- */
+  try{
+    var cfg=JSON.parse(localStorage.getItem('tp360_cfg')||'{}');
+    if(cfg.v) velocidad=cfg.v; if(cfg.f) fuente=cfg.f;
+    if(localStorage.getItem('tp360_txt')) $('ultimo').style.display='inline-block';
+  }catch(e){}
+  function guardaCfg(){ try{localStorage.setItem('tp360_cfg',JSON.stringify({v:velocidad,f:fuente}))}catch(e){} }
+
+  /* ---- carga ---- */
+  var zona=$('zona'), fichero=$('fichero'), pegar=$('pegar'), empezar=$('empezar');
+  zona.addEventListener('click',function(){fichero.click()});
+  zona.addEventListener('dragover',function(e){e.preventDefault();zona.classList.add('arrastre')});
+  zona.addEventListener('dragleave',function(){zona.classList.remove('arrastre')});
+  zona.addEventListener('drop',function(e){
+    e.preventDefault(); zona.classList.remove('arrastre');
+    if(e.dataTransfer.files[0]) leeFichero(e.dataTransfer.files[0]);
+  });
+  fichero.addEventListener('change',function(){ if(fichero.files[0]) leeFichero(fichero.files[0]) });
+  function leeFichero(f){
+    var r=new FileReader();
+    r.onload=function(){ pegar.value=r.result; empezar.disabled=false; procesa(r.result); };
+    r.readAsText(f,'UTF-8');
+  }
+  pegar.addEventListener('input',function(){ empezar.disabled=!pegar.value.trim() });
+  empezar.addEventListener('click',function(){ procesa(pegar.value) });
+  $('ultimo').addEventListener('click',function(){
+    var t=localStorage.getItem('tp360_txt'); if(t){ pegar.value=t; procesa(t); }
+  });
+
+  /* ---- parseo: bloques ### Título ---- */
+  function procesa(raw){
+    raw=raw.replace(/\r\n/g,'\n').trim();
+    if(!raw) return;
+    try{localStorage.setItem('tp360_txt',raw)}catch(e){}
+    guiones=[];
+    var partes=raw.split(/^###[ \t]*/m);
+    if(partes.length>1 && partes[0].trim()==='') partes.shift();
+    if(partes.length>1 || /^###/m.test(raw)){
+      partes.forEach(function(p){
+        p=p.trim(); if(!p) return;
+        var nl=p.indexOf('\n');
+        if(nl===-1){ guiones.push({t:p,c:''}) }
+        else guiones.push({t:p.slice(0,nl).trim(), c:p.slice(nl+1).trim()});
+      });
+    }
+    if(guiones.length<=1){
+      guiones=[{t:'',c:raw.replace(/^###[ \t]*/,'')}];
+      abrir(0); return;
+    }
+    pintaMenu();
+  }
+  function pintaMenu(){
+    var lista=$('lista'); lista.innerHTML='';
+    guiones.forEach(function(g,i){
+      var b=document.createElement('button'); b.className='gbtn';
+      var palabras=g.c.split(/\s+/).filter(Boolean).length;
+      var seg=Math.round(palabras/150*60);
+      b.innerHTML='<span>'+esc(g.t||('Guion '+(i+1)))+'</span><small>'+palabras+' palabras · ~'+seg+' s a 150 ppm</small>';
+      b.onclick=function(){abrir(i)};
+      lista.appendChild(b);
+    });
+    $('carga').style.display='none';
+    $('menu').style.display='flex';
+  }
+  $('volverCarga').addEventListener('click',function(){
+    $('menu').style.display='none'; $('carga').style.display='flex';
+  });
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+
+  /* ---- prompter ---- */
+  function abrir(i){
+    actual=i;
+    var g=guiones[i];
+    texto.innerHTML=(g.t?'<span class="tit">'+esc(g.t)+'</span>':'')+esc(g.c);
+    $('carga').style.display='none'; $('menu').style.display='none';
+    $('prompter').style.display='block';
+    pos=0; aplicaFuente(); aplica(); pinta(); parar();
+    pideWake(); muestraHud();
+  }
+  function aplica(){ texto.style.transform='translateY('+(-pos)+'px) scaleX('+(mirrored?-1:1)+')'; }
+  function aplicaFuente(){ texto.style.fontSize=fuente+'px'; }
+  function pinta(){ $('vvel').textContent=velocidad; $('vfs').textContent=fuente; }
+
+  function paso(ts){
+    if(!corriendo) return;
+    if(!prevTs) prevTs=ts;
+    var dt=(ts-prevTs)/1000; prevTs=ts;
+    pos+=velocidad*dt;
+    var max=texto.scrollHeight;
+    if(pos>max){ parar(); return; }
+    aplica();
+    raf=requestAnimationFrame(paso);
+  }
+  function arrancar(){
+    corriendo=true; prevTs=0;
+    $('play').innerHTML='&#10073;&#10073;';
+    raf=requestAnimationFrame(paso);
+    clearTimeout(tHud); tHud=setTimeout(function(){hud.classList.add('oculto')},1500);
+  }
+  function parar(){
+    corriendo=false; if(raf) cancelAnimationFrame(raf);
+    $('play').innerHTML='&#9654; Ir';
+    muestraHud();
+  }
+  function toggle(){ corriendo?parar():arrancar(); }
+  function muestraHud(){ hud.classList.remove('oculto'); clearTimeout(tHud);
+    if(corriendo) tHud=setTimeout(function(){hud.classList.add('oculto')},1500); }
+
+  scroller.addEventListener('click',function(){ toggle(); });
+  $('play').addEventListener('click',function(e){ e.stopPropagation(); toggle(); });
+  $('mas').addEventListener('click',function(e){e.stopPropagation(); velocidad=Math.min(160,velocidad+4); pinta(); guardaCfg(); muestraHud();});
+  $('menos').addEventListener('click',function(e){e.stopPropagation(); velocidad=Math.max(8,velocidad-4); pinta(); guardaCfg(); muestraHud();});
+  $('fmas').addEventListener('click',function(e){e.stopPropagation(); fuente=Math.min(80,fuente+2); aplicaFuente(); pinta(); guardaCfg(); muestraHud();});
+  $('fmenos').addEventListener('click',function(e){e.stopPropagation(); fuente=Math.max(20,fuente-2); aplicaFuente(); pinta(); guardaCfg(); muestraHud();});
+  $('rebobinar').addEventListener('click',function(e){e.stopPropagation(); parar(); pos=0; aplica();});
+  $('espejo').addEventListener('click',function(e){e.stopPropagation(); mirrored=!mirrored; aplica();});
+  $('salir').addEventListener('click',function(e){
+    e.stopPropagation(); parar();
+    $('prompter').style.display='none';
+    if(guiones.length>1){ $('menu').style.display='flex' } else { $('carga').style.display='flex' }
+    sueltaWake();
+  });
+
+  document.addEventListener('keydown',function(e){
+    if($('prompter').style.display!=='block') return;
+    if(e.code==='Space'){ e.preventDefault(); toggle(); }
+    else if(e.code==='ArrowUp'){ e.preventDefault(); velocidad=Math.min(160,velocidad+4); pinta(); guardaCfg(); muestraHud(); }
+    else if(e.code==='ArrowDown'){ e.preventDefault(); velocidad=Math.max(8,velocidad-4); pinta(); guardaCfg(); muestraHud(); }
+    else if(e.code==='Home'){ parar(); pos=0; aplica(); }
+    else if(e.code==='Escape'){ $('salir').click(); }
+  });
+
+  /* pantalla siempre encendida */
+  function pideWake(){
+    if('wakeLock' in navigator){
+      navigator.wakeLock.request('screen').then(function(w){wakeLock=w}).catch(function(){});
+    }
+  }
+  function sueltaWake(){ if(wakeLock){ wakeLock.release().catch(function(){}); wakeLock=null; } }
+  document.addEventListener('visibilitychange',function(){
+    if(document.visibilityState==='visible' && $('prompter').style.display==='block') pideWake();
+  });
+})();
+</script>
+</body>
+</html>
