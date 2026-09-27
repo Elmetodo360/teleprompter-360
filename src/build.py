@@ -72,7 +72,7 @@ function fillSel() {
 }
 function render() {
   const s = G[cur]; let h = "";
-  h += '<div class="meta">' + esc(s.id + " · " + s.title) + (s.meta.length ? "<br>" + esc(s.meta.join(" · ")) : "") + "</div>";
+  h += '<div class="meta">' + esc(s.id + " · " + s.title) + (s.meta.length ? "<br>" + esc(s.meta.join(" · ")) : "") + (s.nota ? "<br>Rodaje: " + esc(s.nota) : "") + "</div>";
   if (showCif && s.cifras.length) h += '<div class="cifras">' + s.cifras.map(c => "<span>" + esc(c) + "</span>").join("") + "</div>";
   if (s.gancho) h += '<span class="lbl">Gancho</span><p class="gancho">' + esc(s.gancho) + "</p>";
   s.blocks.forEach(b => { h += '<span class="lbl">' + esc((b.t ? b.t + " · " : "") + b.b) + "</span><p>" + esc(b.x) + "</p>"; });
