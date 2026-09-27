@@ -10,8 +10,8 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:"Atkinson Hyperle
 #app{display:flex;flex-direction:column;height:100%}
 header{display:flex;align-items:center;gap:6px;padding:4px 8px;padding-top:calc(4px + env(safe-area-inset-top,0px));background:var(--panel);border-bottom:1px solid var(--line);flex:0 0 auto}
 header button{flex:0 0 auto}
-#sel{flex:1 1 auto;min-width:0;background:var(--btn);color:var(--btnfg);border:1px solid var(--line);border-radius:6px;padding:5px 6px;font:inherit;font-size:13px;height:32px}
-button{background:var(--btn);color:var(--btnfg);border:1px solid var(--line);border-radius:6px;font:inherit;font-weight:700;font-size:14px;padding:0 8px;height:32px;min-width:32px;cursor:pointer;touch-action:manipulation;line-height:1}
+#sel{flex:1 1 auto;min-width:0;background:var(--btn);color:var(--btnfg);border:1px solid var(--line);border-radius:6px;padding:5px 6px;font:inherit;font-size:12px;height:26px}
+button{background:var(--btn);color:var(--btnfg);border:1px solid var(--line);border-radius:6px;font:inherit;font-weight:700;font-size:13px;padding:0 6px;height:26px;min-width:26px;cursor:pointer;touch-action:manipulation;line-height:1}
 button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 button.on{background:var(--acc);color:var(--accfg);border-color:var(--acc)}
 #stage{flex:1 1 auto;position:relative;overflow:hidden}
@@ -32,8 +32,8 @@ footer{flex:0 0 auto;background:var(--panel);border-top:1px solid var(--line);pa
 footer::-webkit-scrollbar{display:none}
 .grp{display:flex;align-items:center;gap:2px;flex:0 0 auto}
 .grp .lab{display:none}
-.grp .val{font-size:12px;color:var(--dim);min-width:28px;text-align:center;font-variant-numeric:tabular-nums}
-#play{flex:0 0 auto;min-width:44px}
+.grp .val{font-size:11px;color:var(--dim);min-width:24px;text-align:center;font-variant-numeric:tabular-nums}
+#play{flex:0 0 auto;min-width:36px}
 .sep{flex:1 1 auto}
 .nav{display:flex;gap:4px;flex:0 0 auto}
 @media (max-width:420px){#text{padding-left:16px;padding-right:16px}}
