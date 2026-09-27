@@ -1,983 +1,760 @@
 [
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G01",
   "title": "La cuenta de la servilleta",
   "meta": [
-   "OCTUBRE - se publica el lunes 28 de septiembre a las 11:30",
-   "Duración: 60 s - Pilar: Costes y márgenes",
-   "Orden de rodaje: 3.º de la sesión"
+   "Publicación: 28 de septiembre · Rodaje: 3.º de la sesión de octubre · Duración orientativa: 55–65 s"
   ],
-  "cifras": [
-   "10 € entran por caja",
-   "3,00 materia prima",
-   "3,50 personal (con SS)",
-   "1,00 alquiler",
-   "1,00 suministros y gestoría",
-   "QUEDA 1 €"
-  ],
-  "gancho": "De cada diez euros que entran por tu caja, cuántos son tuyos? Te lo calculo en un minuto.",
-  "nota": "Mirando a lente. Sin intro, sin saludo.",
+  "cifras": [],
+  "gancho": "Has hecho mil euros de caja. ¿Cuánto puedes gastarte tú?",
+  "nota": "escribe 10 € en una servilleta y ve descontando. El resultado del ejemplo es 1,50 €, antes de los conceptos pendientes.",
   "blocks": [
    {
-    "t": "3-45 s",
-    "b": "LA CUENTA",
-    "x": "Entran diez euros.\nTres se van en materia prima, si lo tienes bien. Quedan siete.\nTres y medio en personal, con Seguridad Social. Quedan tres y medio.\nUno en alquiler. Quedan dos y medio.\nLuz, gas, agua, seguros, gestoría: otro euro. Queda uno y medio.\nY ahora Hacienda.\nTe queda un euro. De cada diez."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "No me digas mil, que mañana vienen los recibos.\n\nMira esta cuenta. Es un ejemplo, con las ventas ya sin IVA.\n\nDe cada diez euros, tres se van en producto. Tres y medio, en personal. Uno, en alquiler. Y otro, entre luz, gas y otros gastos.\n\nQueda uno y medio.\n\nY todavía tienes que comprobar qué falta: mantenimiento, amortizaciones, intereses… y tu trabajo, si no lo has incluido.\n\nPor eso cerrar un sábado con buena caja da tanta alegría… hasta que llega el lunes.\n\nHaz esta cuenta con tu último mes. Si no sabes cuánto queda, tampoco sabes cuánto puedes sacar sin dejar un agujero.\n\nEscríbeme MI NÚMERO por privado y te paso la plantilla."
    },
    {
-    "t": "45-55 s",
-    "b": "EL GIRO",
-    "x": "Si tu cuenta no da eso, no tienes un problema de ventas. Tienes un problema de estructura. Y se arregla."
-   },
-   {
-    "t": "55-60 s",
-    "b": "CTA",
-    "x": "Escríbeme MI NÚMERO por privado y te mando la plantilla con la que hago esta cuenta."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "La caja del sábado te está dando una alegría que el lunes te puede quitar»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G02",
-  "title": "No es subir precios",
+  "title": "Antes de subir la carta",
   "meta": [
-   "OCTUBRE - se publica el lunes 5 de octubre a las 11:30",
-   "Duración: 60 s - Pilar: Ingeniería de menú",
-   "Orden de rodaje: 2.º de la sesión"
+   "Publicación: 5 de octubre · Rodaje: 2.º de octubre · Duración orientativa: 50–60 s"
   ],
-  "cifras": [
-   "8 de cada 10 casos",
-   "Las 3 cosas antes de tocar la carta"
-  ],
-  "gancho": "Subir precios no es la solución. Y en ocho de cada diez casos, ni siquiera es el problema.",
-  "nota": "Tono de quien lleva 25 años oyendo lo mismo.",
+  "cifras": [],
+  "gancho": "¿Vas a subir un euro toda la carta? Espera. A lo mejor estás tocando el plato equivocado.",
+  "nota": "carta en mano. Señala tres platos como si estuvieras revisándola con el dueño.",
   "blocks": [
    {
-    "t": "3-15 s",
-    "b": "EL REFLEJO",
-    "x": "Cuando alguien me dice que no le salen los números, lo primero que quiere hacer es tocar la carta. Subir un euro aquí, cincuenta céntimos allá. Y casi siempre está tapando otra cosa."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Tienes uno que se vende bien y deja margen. Otro que apenas sale. Y otro que pide todo el mundo, pero te tiene la cocina atascada.\n\n¿A los tres les vas a hacer lo mismo?\n\nCoge los cinco que más vendes. Mira cuánto cuestan con los precios de esta semana, cuántas raciones salen de verdad y cuánto trabajo llevan.\n\nA lo mejor hay que subir uno. En otro, ajustar la ración. Y en el tercero, cambiar una elaboración que os complica cada servicio.\n\nSubir precios puede hacer falta. Pero antes quiero saber qué estás intentando arreglar.\n\nPorque cincuenta céntimos puestos a ojo siguen siendo una decisión a ojo.\n\nGuárdalo para cuando te sientes a revisar la carta."
    },
    {
-    "t": "15-30 s",
-    "b": "POR QUE FALLA",
-    "x": "Si subes precios con el escandallo mal hecho, lo único que consigues es perder dinero más despacio. El agujero sigue ahí."
-   },
-   {
-    "t": "30-50 s",
-    "b": "LAS TRES COSAS",
-    "x": "Antes de tocar un solo precio hay tres cosas que mirar: cuánto te cuesta de verdad cada plato CON LA MERMA DENTRO, cuántas raciones te salen de verdad de cada kilo, y cuánto tiempo de cocina lleva cada plato."
-   },
-   {
-    "t": "50-60 s",
-    "b": "CIERRE + CTA",
-    "x": "Cuando eso está, a lo mejor ni hace falta subir. Solo dejar de vender lo que te cuesta dinero.\nEn el test de la bio te sale cuál de las ocho áreas te está costando más."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Antes de reimprimir la carta, revisa estos cinco platos»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G03",
   "title": "El camarero nuevo",
   "meta": [
-   "OCTUBRE - se publica el lunes 12 de octubre a las 11:30",
-   "Duración: 60 s - Pilar: Personal",
-   "Orden de rodaje: 1.º de la sesión — CALENTAMIENTO"
+   "Publicación: 12 de octubre · Rodaje: 1.º de octubre · Duración orientativa: 50–60 s"
   ],
-  "cifras": [
-   "2.400 € por reposición",
-   "3 veces al año = 7.000 €"
-  ],
-  "gancho": "El camarero nuevo no se va por el sueldo. Se va la segunda semana. Y te cuesta dos mil cuatrocientos euros.",
-  "nota": "Es una historia. Cuéntala, no la recites.",
+  "cifras": [],
+  "gancho": "Lleva tres días trabajando contigo y ya le has dicho: “Eso deberías saberlo”. ¿Quién se lo enseñó?",
+  "nota": "pausa tras la pregunta inicial. La ironía va contra la mala incorporación, no contra el trabajador.",
   "blocks": [
    {
-    "t": "3-25 s",
-    "b": "LA ESCENA",
-    "x": "Entra un lunes. Le enseña el que puede, no el que sabe. Nadie le dice qué se espera de él ni cómo se mide si lo está haciendo bien.\nLa primera semana aguanta porque es nuevo. La segunda ya ha entendido que aquí se aprende a base de que te griten cuando fallas.\nY se va."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Entró el lunes. Uno le explicó las mesas. Otro, el TPV. Y el tercero le dijo que aquí las cosas se hacen de otra manera.\n\nLlega el viernes, se equivoca y le cae la bronca.\n\nHombre, nuevo era. Adivino, no.\n\nAntes de ponerlo solo, dale una persona de referencia. Enséñale la carta, deja que practique y comprueba qué sabe hacer sin ayuda.\n\nY al terminar el turno, pregúntale dónde se ha atascado. Ahí vas a descubrir más que diciéndole que espabile.\n\nLuego hablaremos de actitud. Pero primero asegúrate de haberle enseñado el trabajo.\n\nComenta ONBOARDING y te paso el protocolo de incorporación."
    },
    {
-    "t": "25-45 s",
-    "b": "LA CUENTA",
-    "x": "Y tú vuelves a publicar la oferta, a hacer entrevistas, a dar de alta, a formar. Entre tu tiempo, lo que rinde de menos el equipo esas semanas, y el alta y la baja: dos mil cuatrocientos euros. Por persona. Pasa tres veces al año y son siete mil."
-   },
-   {
-    "t": "45-60 s",
-    "b": "CIERRE + CTA",
-    "x": "Un protocolo de siete días cuesta una tarde. Siete mil euros cuestan un año.\nComenta ONBOARDING y te paso el protocolo."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Le has dado un delantal y ya esperas que conozca tu restaurante»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G04",
-  "title": "Umbral 1 de 8 - Coste de producto",
+  "title": "Coste de producto: la cámara también cuenta",
   "meta": [
-   "OCTUBRE - se publica el lunes 19 de octubre a las 11:30",
-   "Duración: 90 s - Pilar: Método · serie de 8",
-   "Orden de rodaje: 4.º de la sesión"
+   "Publicación: 19 de octubre · Serie: 1 de 8 · Rodaje: 4.º de octubre · Duración orientativa: 55–70 s"
   ],
-  "cifras": [
-   "Food cost = (inv. inicial + compras − inv. final) ÷ ventas sin IVA",
-   "UMBRAL 30 %",
-   "30-35 % hay trabajo",
-   "+37 % agujero mensual"
-  ],
-  "gancho": "En noventa segundos sé si tu cocina te está robando margen. Solo necesito tres números.",
-  "nota": "Abre la serie de ocho. Tono de quien enseña, no de quien vende.",
+  "cifras": [],
+  "gancho": "Ese pedido que sigue en la cámara te puede estar falseando el coste del mes.",
+  "nota": "muestra la fórmula: (inventario inicial + compras − inventario final) ÷ ventas × 100.",
   "blocks": [
    {
-    "t": "3-20 s",
-    "b": "LOS TRES NÚMEROS",
-    "x": "Compras del mes. Ventas del mes. Inventario de principio y de fin."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Si divides lo comprado entre lo vendido, estás midiendo compras. Parte de ese género todavía no lo has usado.\n\nPara calcular el consumo necesitas cuatro datos: lo que tenías al empezar, lo que compraste, lo que queda al cerrar y las ventas del periodo.\n\nInventario inicial, más compras, menos inventario final. Eso es el consumo. Lo divides entre las ventas y lo multiplicas por cien.\n\nTodo con el mismo criterio, sin IVA y sin mezclar cocina con bebidas si las estás analizando por separado.\n\n¿Y qué porcentaje es bueno? Depende de tu carta y de tu negocio. Un treinta por ciento no te da un aprobado automático.\n\nPrimero saca tu dato real. Luego compáralo con lo que debería costarte lo que has vendido.\n\nGuarda este vídeo para el próximo inventario."
    },
    {
-    "t": "20-45 s",
-    "b": "LA FÓRMULA",
-    "x": "Coges lo que compraste, le sumas lo que tenías al principio, le restas lo que te queda al final. Eso es lo que CONSUMISTE de verdad. Y lo divides entre lo que vendiste, sin IVA. Ese número es tu food cost real."
-   },
-   {
-    "t": "45-70 s",
-    "b": "EL UMBRAL",
-    "x": "El umbral es treinta. Por debajo de treinta, bien. Entre treinta y treinta y cinco, hay trabajo. Por encima de treinta y siete, tienes un agujero y lo estas pagando todos los meses."
-   },
-   {
-    "t": "70-85 s",
-    "b": "QUÉ HACER",
-    "x": "Y si el número no coincide con lo que dice tu escandallo, ya sabes dónde está: merma, raciones que se van de gramaje, o compras que no controlas."
-   },
-   {
-    "t": "85-90 s",
-    "b": "CTA",
-    "x": "Treinta por ciento. Apúntatelo. Las otras siete áreas están en el test de la bio."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Calculas el coste de comida sumando facturas? Te falta abrir la cámara»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G05",
-  "title": "Umbral 2 de 8 - Personal",
+  "title": "Personal: mirar las horas",
   "meta": [
-   "NOVIEMBRE - se publica el lunes 26 de octubre a las 11:30",
-   "Duración: 90 s - Pilar: Método · serie de 8",
-   "Orden de rodaje: 1.º de la sesión de noviembre"
+   "Publicación: 26 de octubre · Serie: 2 de 8 · Rodaje: 1.º de noviembre · Duración orientativa: 50–60 s"
   ],
-  "cifras": [
-   "Coste total personal ÷ ventas sin IVA",
-   "UMBRAL 32 %"
-  ],
-  "gancho": "Si tu personal pasa del treinta y dos por ciento de las ventas, no tienes un problema de plantilla. Tienes un problema de cuadrante.",
-  "nota": "La distinción plantilla/cuadrante es todo el reel.",
+  "cifras": [],
+  "gancho": "A las doce te sobra gente. A las dos estás pidiendo auxilio. Mira el cuadrante.",
+  "nota": "dos columnas visibles: hora y carga de trabajo. Evita presentar el 32 % como frontera universal.",
   "blocks": [
    {
-    "t": "3-25 s",
-    "b": "LA FÓRMULA",
-    "x": "Coge el coste total de personal del mes. Sueldos, Seguridad Social, extras, todo. Divídelo entre las ventas sin IVA. El umbral es treinta y dos."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Tienes el mismo equipo en dos momentos que no se parecen en nada.\n\nAntes de decidir si necesitas más o menos plantilla, pon en una hoja las ventas por franjas. Al lado, las horas de trabajo de esas franjas.\n\nY apunta también lo que no sale en los tickets: preparar, recibir pedidos, limpiar, cerrar.\n\nAhora sí: ¿dónde falta cobertura? ¿Dónde coinciden personas sin necesidad? ¿Qué tarea podrías adelantar?\n\nEl porcentaje de personal te avisa de que hay algo que revisar. Pero no te dice por sí solo a quién quitar ni a qué hora ponerlo.\n\nHaz el ejercicio con una semana real. Incluido ese sábado que siempre se os atasca.\n\nComenta CUADRANTE y te paso la hoja por franjas."
    },
    {
-    "t": "25-60 s",
-    "b": "EL EJERCICIO",
-    "x": "Y antes de despedir a nadie, haz esto: pon tu venta por franjas de dos horas al lado de tus horas trabajadas por esas mismas franjas. Casi siempre aparece lo mismo: de once a una hay tres personas y entran cuatro mesas. De nueve a once hay tres personas y entran veinte."
-   },
-   {
-    "t": "60-80 s",
-    "b": "LA CONCLUSIÓN",
-    "x": "No sobra gente. Está mal repartida."
-   },
-   {
-    "t": "80-90 s",
-    "b": "CTA",
-    "x": "El personal no se recorta. Se cuadra.\nComenta CUADRANTE y te paso la hoja por franjas."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Antes de decir “me sobra un camarero”, enséñame a qué hora»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G06",
-  "title": "Umbral 3 de 8 - Prime cost",
+  "title": "Producto y personal, juntos",
   "meta": [
-   "NOVIEMBRE - se publica el lunes 2 de noviembre a las 11:30",
-   "Duración: 75 s - Pilar: Método · serie de 8",
-   "Orden de rodaje: 2.º de la sesión de noviembre"
+   "Publicación: 2 de noviembre · Serie: 3 de 8 · Rodaje: 2.º de noviembre · Duración orientativa: 45–60 s"
   ],
-  "cifras": [
-   "Food cost + personal ÷ ventas",
-   "UMBRAL 62 %",
-   "+65 % insalvable"
-  ],
-  "gancho": "Hay un número que decide si tu restaurante vive o muere. Y casi nadie lo calcula.",
-  "nota": "Promesa fuerte. Cúmplela rápido.",
+  "cifras": [],
+  "gancho": "De cada cien euros que vendes, sesenta y cinco se van entre comida y personal. ¿Con los otros treinta y cinco llegas?",
+  "nota": "escribe 100 − 65 = 35. Presentarlo como ejemplo, no como diagnóstico de cualquier local.",
   "blocks": [
    {
-    "t": "3-25 s",
-    "b": "QUÉ ES",
-    "x": "Se llama prime cost. Es la suma de dos cosas que ya tienes: lo que te cuesta el producto y lo que te cuesta el personal. Food cost más coste de personal. Sobre ventas."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "De ahí tienen que salir alquiler, suministros, mantenimiento y el resto de gastos. Y tendría que quedar beneficio.\n\nEsa suma de producto y personal se llama prime cost.\n\nTe interesa mirarla junta porque puedes engañarte mirando cada parte por separado.\n\nPor ejemplo: compras algo más elaborado, ahorras horas en cocina, pero sube el coste del producto. ¿Has mejorado? Hay que hacer las dos cuentas.\n\nY al revés: ahorrar en una compra puede salir caro si luego exige muchísimo trabajo.\n\nEse sesenta y cinco del ejemplo no condena un restaurante. Te obliga a mirar si el resto cabe.\n\nSaca tus dos porcentajes del último mes y súmalos. Empieza por ahí."
    },
    {
-    "t": "25-50 s",
-    "b": "EL UMBRAL",
-    "x": "El umbral es sesenta y dos. Por debajo, el negocio respira. Por encima de sesenta y cinco, ya da igual lo que hagas con el resto: no hay alquiler ni proveedor que te salve."
-   },
-   {
-    "t": "50-70 s",
-    "b": "POR QUÉ IMPORTA",
-    "x": "Y es el número más útil que existe, porque si uno de los dos se te va, puedes compensar con el otro. Te da margen de maniobra."
-   },
-   {
-    "t": "70-75 s",
-    "b": "CTA",
-    "x": "Si solo vas a mirar un número al mes, mira este."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Has ahorrado en la compra. Ahora mira cuánto te ha costado prepararla»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G07",
-  "title": "Umbral 4 de 8 - Alquiler",
+  "title": "El alquiler que tienes que vender",
   "meta": [
-   "NOVIEMBRE - se publica el lunes 9 de noviembre a las 11:30",
-   "Duración: 75 s - Pilar: Método · serie de 8",
-   "Orden de rodaje: 3.º de la sesión de noviembre"
+   "Publicación: 9 de noviembre · Serie: 4 de 8 · Rodaje: 3.º de noviembre · Duración orientativa: 45–60 s"
   ],
-  "cifras": [
-   "Alquiler ÷ ventas",
-   "UMBRAL 10 %"
-  ],
-  "gancho": "Si el alquiler se te come más del diez por ciento, el problema no es la carta.",
-  "nota": "Directo.",
+  "cifras": [],
+  "gancho": "Tres mil euros de alquiler. ¿Cuánto tienes que vender para poder pagarlos?",
+  "nota": "cuenta sencilla en pantalla: 3.000 / 30.000 = 10 %; 3.000 / 60.000 = 5 %.",
   "blocks": [
    {
-    "t": "3-20 s",
-    "b": "LA FÓRMULA",
-    "x": "Alquiler dividido entre ventas. El umbral es diez."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Porque tres mil de caja no bastan. De esa venta también salen género, personal y otros gastos.\n\nSi vendes treinta mil al mes, sin IVA, el alquiler representa un diez por ciento. Si vendes sesenta mil, un cinco.\n\nEl recibo es el mismo. El esfuerzo del negocio, no.\n\nPor eso, antes de enamorarte de un local, calcula qué venta te exige. Y si esa venta cabe de verdad: mesas, ticket, servicios y días abiertos.\n\nSi ya estás dentro y no llegas, pon sobre la mesa las opciones: mejorar ventas con margen, revisar el modelo o plantear una renegociación.\n\nPero con números. “Es que este mes ha ido flojo” explica poco.\n\nPásaselo a quien esté a punto de firmar un local."
    },
    {
-    "t": "20-40 s",
-    "b": "LA DIFERENCIA",
-    "x": "Y este es distinto a los demas, porque el alquiler no lo puedes bajar mañana. Lo firmaste hace años. Así que solo hay dos salidas: o subes la venta hasta que el alquiler pese menos, o renegocias."
-   },
-   {
-    "t": "40-65 s",
-    "b": "LA SEGUNDA SALIDA",
-    "x": "Y la segunda se puede. Más de lo que la gente cree. Un local vacío le cuesta dinero al propietario todos los meses, y un inquilino que lleva años pagando puntual tiene más fuerza de la que se imagina. Pero hay que ir con los números en la mano, no con la queja."
-   },
-   {
-    "t": "65-75 s",
-    "b": "CIERRE",
-    "x": "El alquiler no es un gasto fijo. Es un gasto negociado hace tiempo."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Antes de preguntar cuánto cuesta ese local, pregunta cuánto te obliga a vender»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G08",
-  "title": "«Mi caso es distinto.»",
+  "title": "Mi caso es distinto",
   "meta": [
-   "NOVIEMBRE - se publica el lunes 16 de noviembre a las 11:30",
-   "Duración: 70 s - Pilar: Objeciones",
-   "Orden de rodaje: 4.º de la sesión de noviembre"
+   "Publicación: 16 de noviembre · Rodaje: 4.º de noviembre · Duración orientativa: 45–55 s"
   ],
-  "cifras": [
-   "200 veces",
-   "Las mismas 3 areas: compras, cuadrante, carta"
-  ],
-  "gancho": "«Mi caso es distinto.» Lo he oído doscientas veces. Y en las doscientas, el problema estaba en las mismas tres áreas.",
-  "nota": "Entrecomilla con la voz la primera frase.",
+  "cifras": [],
+  "gancho": "“En mi restaurante eso no funciona”. Vale. ¿Lo has probado o lo hemos descartado ya?",
+  "nota": "tono de conversación; pregunta final real, sin regañar.",
   "blocks": [
    {
-    "t": "5-25 s",
-    "b": "LA CONCESIÓN",
-    "x": "Y es verdad que cada restaurante es distinto. El tuyo tiene una carta que no tiene nadie, un equipo que llevas años montando, un barrio con su cosa."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Claro que tu casa tiene sus cosas. El barrio, el cliente, la carta, el equipo.\n\nNo voy a organizar igual un bar de desayunos que un restaurante de degustación.\n\nPero en los dos necesito saber cuánto cuesta servir lo que venden. En los dos alguien tiene que organizar el trabajo. Y en los dos hay que contar lo que se tira.\n\nLuego cambia cómo lo hacemos.\n\nLo que me preocupa es que “mi caso es distinto” acabe significando “vamos a seguir igual”.\n\nSi llevas meses con el mismo problema, elige una cosa. Mídela, cambia algo y comprueba qué pasa.\n\n¿Qué llevas tiempo queriendo cambiar en tu local y nunca llegas a probar?"
    },
    {
-    "t": "25-45 s",
-    "b": "EL GIRO",
-    "x": "Pero cuando abres los números, la película es siempre la misma. O compras mal, o cuadras mal, o tienes una carta que vende lo que menos te deja. Doscientos restaurantes. Sitios distintos, tamaños distintos, dueños distintos. Y el agujero, en las mismas tres áreas."
-   },
-   {
-    "t": "45-65 s",
-    "b": "POR QUÉ ES BUENO",
-    "x": "Eso no es malo. Es buenísimo. Porque si el problema fuera único, habría que inventar la solución cada vez. Y no hay que inventarla: ya está inventada."
-   },
-   {
-    "t": "65-70 s",
-    "b": "CTA",
-    "x": "Tu caso es distinto. Tu problema, probablemente no. Compruébalo: test en la bio."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Tu restaurante es diferente. Eso no impide contar lo que tiras»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G09",
-  "title": "Lo que tiras",
+  "title": "La merluza de 14,80",
   "meta": [
-   "DICIEMBRE - se publica el lunes 23 de noviembre a las 11:30",
-   "Duración: 80 s - Pilar: Costes",
-   "Orden de rodaje: 1.º de la sesión de diciembre"
+   "Publicación: 23 de noviembre · Rodaje: 1.º de diciembre · Duración orientativa: 50–60 s"
   ],
-  "cifras": [
-   "Merluza 14,80 €/kg",
-   "Rendimiento 60 %",
-   "Coste real 23,87 €/kg",
-   "UMBRAL desperdicio 3 %"
-  ],
-  "gancho": "Lo que tiras a la basura también lo has pagado. Y no aparece en ningún sitio.",
-  "nota": "Directo.",
+  "cifras": [],
+  "gancho": "Esa merluza de catorce ochenta te está saliendo a casi veinticinco euros el kilo.",
+  "nota": "mostrar 14,80 € ÷ 60 % = 24,67 €/kg útil. El 60 % es el supuesto del ejemplo.",
   "blocks": [
    {
-    "t": "3-35 s",
-    "b": "LA PRIMERA MERMA",
-    "x": "Hay dos mermas y casi todo el mundo las mezcla. Una es la del producto: la merluza entra a catorce con ochenta el kilo, pero cuando la limpias se te queda en el sesenta por ciento. El kilo que llega al plato te cuesta veintitrés con ochenta y siete. Si tu escandallo dice catorce ochenta, tu escandallo está mal."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "La compras entera. La limpias. Y, en este ejemplo, de cada kilo te quedan seiscientos gramos útiles.\n\nDivide catorce ochenta entre cero coma seis: veinticuatro con sesenta y siete.\n\nEse es el coste del kilo aprovechable si no asignas valor a otros aprovechamientos. Antes de añadirle nada al plato.\n\nSi en la ficha has puesto el precio de la factura, la ración empieza mal calculada.\n\nY luego está lo que se estropea, lo que se cae o lo que hay que repetir. Eso también hay que apuntarlo, pero separado. La comida del equipo, registrada como tal.\n\nEmpieza con un producto caro: pésalo al entrar y después de limpiarlo. Mira qué rendimiento te da de verdad.\n\nComenta MERMA y te paso la hoja de control."
    },
    {
-    "t": "35-60 s",
-    "b": "LA SEGUNDA",
-    "x": "La otra es la del día: lo que se cae, lo que se pasa, lo que sale mal y se repite, lo que se come el personal sin contar."
-   },
-   {
-    "t": "60-75 s",
-    "b": "CÓMO SE MIDE",
-    "x": "La primera se calcula una vez. La segunda hay que apuntarla todos los días durante un mes, y entonces te llevas la sorpresa."
-   },
-   {
-    "t": "75-80 s",
-    "b": "CTA",
-    "x": "El umbral del desperdicio diario es el tres por ciento. Comenta MERMA y te paso la hoja de control."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Pagas el kilo entero. ¿Por qué calculas como si lo sirvieras entero?»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G10",
-  "title": "El caso de los 84.000",
+  "title": "Los 84.000 euros",
   "meta": [
-   "DICIEMBRE - se publica el lunes 30 de noviembre a las 11:30",
-   "Duración: 90 s - Pilar: Caso real",
-   "Orden de rodaje: 2.º de la sesión de diciembre"
+   "Publicación: 30 de noviembre · Rodaje: 2.º de diciembre · Duración orientativa: 55–65 s"
   ],
-  "cifras": [
-   "Factura 84.000 €/mes",
-   "Se lleva 1.900 €",
-   "Food cost 38 % (debía ser 31) = 6.000 €/mes",
-   "4 h muertas/servicio = 1.900/mes",
-   "70 platos, 12 son el 80 %"
-  ],
-  "gancho": "Facturaba ochenta y cuatro mil al mes y se llevaba mil novecientos euros.",
-  "nota": "Deja un segundo de silencio después. Que cale.",
+  "cifras": [],
+  "gancho": "Vender ochenta y cuatro mil euros al mes y sacar mil novecientos para ti. ¿Te compensaría?",
+  "nota": "pausa después de 1.900. Rótulo visible: “Ejemplo hipotético · ventas sin IVA”.",
   "blocks": [
    {
-    "t": "5-20 s",
-    "b": "LA ESCENA",
-    "x": "Un restaurante lleno. De los de lista de espera el viernes. Ochenta y cuatro mil euros al mes de facturacion. Y el dueño se llevaba mil novecientos."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Te pongo un ejemplo. No un caso auditado.\n\nUn restaurante vende esos ochenta y cuatro mil, sin IVA. El dueño retira mil novecientos. Solo con eso todavía no sabemos el beneficio: faltan las cuentas.\n\nPero mira lo que pesan siete puntos de coste de producto en ese negocio: cinco mil ochocientos ochenta euros al mes.\n\nSi está consumiendo un treinta y ocho por ciento y su mezcla de ventas permitiría un treinta y uno, hay una diferencia que investigar.\n\nPuede haber raciones, merma, compras, errores de registro… No voy a prometer que todo se recupera.\n\nLo que sí digo es que, con esa venta, cada punto importa mucho.\n\nSi te reconoces en vender mucho y no saber qué queda, escríbeme AUDITORÍA."
    },
    {
-    "t": "20-30 s",
-    "b": "EL TRABAJO",
-    "x": "Tardamos tres semanas en encontrar dónde estaba. No era una cosa gorda: eran tres pequeñas."
-   },
-   {
-    "t": "30-70 s",
-    "b": "LAS TRES",
-    "x": "El food cost estaba en el treinta y ocho, cuando su carta daba para estar en el treinta y uno. Eso son casi seis mil euros al mes.\nEl cuadrante tenía cuatro horas muertas cada servicio, todos los días. Mil novecientos al mes.\nY la carta: setenta platos, de los cuales doce eran el ochenta por ciento de la venta."
-   },
-   {
-    "t": "70-85 s",
-    "b": "LA MORALEJA",
-    "x": "Ninguna de las tres se veía desde dentro. Porque desde dentro solo ves que el local está lleno."
-   },
-   {
-    "t": "85-90 s",
-    "b": "CTA",
-    "x": "Estar lleno y ganar dinero son dos cosas distintas. Escríbeme AUDITORÍA si te has reconocido."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Con ochenta y cuatro mil euros de venta, un solo punto son ochocientos cuarenta euros»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G11",
-  "title": "Tu TPV",
+  "title": "El TPV que solo usas para cobrar",
   "meta": [
-   "DICIEMBRE - se publica el lunes 7 de diciembre a las 11:30",
-   "Duración: 70 s - Pilar: Tecnología",
-   "Orden de rodaje: 3.º de la sesión de diciembre"
+   "Publicación: 7 de diciembre · Rodaje: 3.º de diciembre · Duración orientativa: 45–55 s"
   ],
-  "cifras": [
-   "14 meses de datos",
-   "3 informes que ya trae de serie"
-  ],
-  "gancho": "Tu TPV lleva catorce meses diciéndote qué plato te arruina. Nadie lo ha leído.",
-  "nota": "Directo.",
+  "cifras": [],
+  "gancho": "Tu TPV sabe cuál es tu plato más vendido. ¿Tú sabes cuánto te deja?",
+  "nota": "informe sin datos de clientes. No atribuir al TPV información de costes si no está integrada.",
   "blocks": [
    {
-    "t": "3-20 s",
-    "b": "LO QUE TIENES",
-    "x": "Tienes ahí dentro cada ticket de cada servicio de los últimos años. Qué se vendió, a qué hora, con qué, por cuánto. Y lo usas para cobrar."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Porque son dos preguntas distintas.\n\nSaca la venta por artículos y crúzala con tus escandallos actualizados. Ahí puedes ver qué platos venden mucho y qué margen de producto aportan.\n\nDespués mira las ventas por horas. ¿Tu cuadrante sigue ese ritmo o llevas meses copiando la misma semana?\n\nY, por último, el ticket medio. ¿Está cambiando porque subiste precios, porque piden más o porque viene otro tipo de cliente?\n\nEmpieza por comprobar qué informes o exportaciones permite tu TPV. A lo mejor tienes los datos y lo que falta es sentarte con ellos.\n\nComenta TPV y te digo qué tres informes pedir."
    },
    {
-    "t": "20-55 s",
-    "b": "LOS TRES INFORMES",
-    "x": "Con tres informes que ya trae de serie sabrías: qué platos se venden de verdad y cuáles llevan meses ocupando sitio en la carta; a qué horas entra el dinero, que casi nunca es cuando la gente cree; y cómo se mueve tu ticket medio."
-   },
-   {
-    "t": "55-65 s",
-    "b": "EL REMATE",
-    "x": "No hace falta contratar nada ni instalar nada. Está pagado."
-   },
-   {
-    "t": "65-70 s",
-    "b": "CTA",
-    "x": "Comenta TPV y te digo exactamente los tres informes que hay que sacar."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Antes de pagar otra herramienta, mira lo que ya tienes en el TPV»."
    }
   ]
  },
  {
-  "grupo": "Plan 100K · octubre",
+  "grupo": "Plan 100K · 12 guiones",
   "id": "G12",
-  "title": "«En enero me pongo.»",
+  "title": "En enero me pongo",
   "meta": [
-   "DICIEMBRE - se publica el lunes 14 de diciembre a las 11:30",
-   "Duración: 70 s - Pilar: Objeciones · cierre de año",
-   "Orden de rodaje: 4.º de la sesión de diciembre"
+   "Publicación: 14 de diciembre · Rodaje: 4.º de diciembre · Duración orientativa: 45–60 s"
   ],
-  "cifras": [
-   "4 puntos de margen",
-   "50.000 €/mes → 2.000 €/mes",
-   "3 meses = 6.000 €"
-  ],
-  "gancho": "Si llevas tres meses diciendo «en enero me pongo», esto es para ti.",
-  "nota": "Sin reproche. Tono de entender, no de regañar.",
+  "cifras": [],
+  "gancho": "“En enero miro los números”. ¿Y si esperar te cuesta dos mil euros al mes?",
+  "nota": "sin reproche. Rótulo: “Ejemplo: 50.000 € × 4 % = 2.000 €/mes”.",
   "blocks": [
    {
-    "t": "5-30 s",
-    "b": "LA EMPATÍA",
-    "x": "Lo entiendo. El día a día se come todo. Abres, sirves, cierras, haces pedidos, cubres una baja, y cuando quieres mirar los números son las doce de la noche y no tienes cuerpo."
+    "t": "",
+    "b": "Texto a cámara",
+    "x": "Te entiendo. Hoy falta uno. Mañana se rompe algo. Pasado tienes un grupo. Siempre hay algo que atender antes de sentarte.\n\nPero haz una cuenta conmigo.\n\nSi vendes cincuenta mil al mes, sin IVA, y estás perdiendo cuatro puntos de margen que podrías recuperar, hablamos de dos mil euros al mes.\n\nTres meses serían seis mil.\n\nEs un ejemplo. Tu cifra puede ser otra. Precisamente por eso hay que mirarla.\n\nNo te estoy diciendo que reorganices el restaurante esta noche. Empieza por algo que puedas terminar: revisar tus cinco platos más vendidos o contar lo que se tira esta semana.\n\n¿Qué vas a mirar primero?"
    },
    {
-    "t": "30-55 s",
-    "b": "LA CUENTA",
-    "x": "Pero hay una cuenta que conviene hacer. Si se te están yendo cuatro puntos de margen y facturas cincuenta mil al mes, son dos mil euros. Cada mes que pasa. Tres meses de «ya lo miraré» son seis mil euros."
-   },
-   {
-    "t": "55-65 s",
-    "b": "EL REMATE",
-    "x": "Eso no es dejarlo para enero. Eso es pagar seis mil euros por no mirarlo."
-   },
-   {
-    "t": "65-70 s",
-    "b": "CTA",
-    "x": "No hace falta arreglarlo hoy. Hace falta saber cuánto te cuesta no arreglarlo. Test en la bio."
+    "t": "",
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Llevas meses esperando una semana tranquila para revisar el negocio. ¿Cuándo fue la última?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J1",
-  "title": "Me escribió un hostelero (cap. 1)",
+  "title": "Cinco personas y los platos no salen",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 45–55 s"
   ],
   "cifras": [],
-  "gancho": "Me escribió un hostelero. Dos meses abierto y ya devuelve platos.",
-  "nota": "",
+  "gancho": "Cinco personas trabajando y una mesa esperando sus huevos. ¿Qué está pasando ahí dentro?",
+  "nota": "escena ilustrativa. Si recuperas el mensaje original de Zaragoza, puedes presentarlo como consulta real anonimizada; esta versión no lo necesita.",
   "blocks": [
    {
     "t": "",
-    "b": "LECTURA, leyendo el móvil de verdad",
-    "x": "Un local de brunch en Zaragoza. Me dice: la organización es fatal, los platos no salen, nos los devuelven. Y somos cinco: tres en cocina, dos en barra."
+    "b": "Texto a cámara",
+    "x": "Imagina un brunch: tres en cocina, dos en barra. Entran comandas, salen cafés, alguien pregunta por la mesa cuatro y nadie sabe qué le falta.\n\nUno ha empezado los huevos. Otro espera el pan. Y el plato que ya está listo se queda enfriando.\n\nAntes de contratar a una sexta persona, mira dónde se atasca el pedido.\n\nQuién ordena la salida. Quién monta. Quién comprueba que está completo. Y quién lo lleva.\n\nPuede que falte personal. Pero el número de personas, por sí solo, no te lo dice.\n\nCoge una comanda del último servicio malo y sigue su recorrido. ¿En qué momento dejó de avanzar?\n\nCuéntame dónde se os atasca a vosotros."
    },
    {
     "t": "",
-    "b": "RESPUESTA, a cámara",
-    "x": "Pues os voy a decir una cosa: esto no es un problema de personal, es un problema de pase. Cinco personas para un brunch dan de sobra. Pero si nadie ha definido quién canta la comanda, quién monta y quién saca el plato, da igual que metas una sexta: la mesa cuatro seguirá esperando sus huevos. El pase se define con la carta delante, en una hora. Una hora."
-   },
-   {
-    "t": "",
-    "b": "REMATE + CTA",
-    "x": "Dos meses abierto no es tu problema. Dos meses sin pase, sí. Si tienes un local y quieres que responda el tuyo, cuéntamelo por DM."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Los huevos están. El pan también. ¿Por qué sigue esperando la mesa cuatro?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J2",
-  "title": "La carta que pierde dinero",
+  "title": "El plato estrella",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Tu plato estrella puede ser el que más dinero te hace perder.",
-  "nota": "",
+  "gancho": "Como tu plato más vendido esté mal calculado, lo repites cincuenta veces cada sábado.",
+  "nota": "plato real y ficha al lado. No afirmar pérdidas sin haber calculado el margen.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Pusiste los precios hace un año. Desde entonces ha subido el aceite, la carne, la luz... y tu carta sigue igual. Con los costes de hoy, cada plato te deja menos y alguno ya te cuesta más de lo que cobras por él. El que más sale es el estrella. Por lo cual, el plato que más vendes es el que más veces te repite esa pérdida."
+    "b": "Texto a cámara",
+    "x": "Y tú encantado, porque sale muchísimo.\n\nPero el precio lo pusiste hace un año. La carne ha cambiado de tarifa, la guarnición ha crecido y la salsa ya no se hace como en la ficha.\n\nSigues vendiendo el mismo nombre. El coste puede ser otro.\n\nEsta semana coge tus cinco platos más vendidos. Usa las últimas facturas, pesa una ración real y actualiza el escandallo.\n\nA lo mejor están bien. Perfecto. Pero como uno esté dejando mucho menos de lo que creías, te interesa enterarte antes del próximo sábado.\n\nEmpieza por el que más sale. Ahí cualquier diferencia se repite muchas veces."
    },
    {
     "t": "",
-    "b": "PAYOFF",
-    "x": "La carta se revisa cuando el género se mueve, no cuando te apetece. Coge tus cinco platos más vendidos y hazles el escandallo esta semana: es una tarde de trabajo."
-   },
-   {
-    "t": "",
-    "b": "REMATE + CTA",
-    "x": "Precios del año pasado con costes de hoy: esa es la cuenta que te come el margen. Sígueme, que de números hablo todos los días."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Tu plato estrella te deja dinero o simplemente te da mucho trabajo?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J3",
-  "title": "Facturas 40.000 € y no te pagas nómina",
+  "title": "Cobra todo el mundo menos tú",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 45–55 s"
   ],
   "cifras": [],
-  "gancho": "Facturas cuarenta mil euros al mes y no te estás pagando una nómina.",
-  "nota": "",
+  "gancho": "Cobra el proveedor. Cobra el equipo. Cobra el casero. Y tú, si queda.",
+  "nota": "tono sereno. Remuneración, beneficio y efectivo disponible son conceptos diferentes.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Y no eres el único: esto lo veo cada semana. La caja entra, el local se llena, cobra todo el mundo... menos tú. ¿Y dónde está ese dinero? Casi siempre en tres sitios: en el género que compras sin escandallo, en la merma que nadie apunta y en dos o tres platos que vendes por debajo de lo que te cuestan. Entre esas tres cosas se van dos mil, tres mil euros al mes. Sin que nadie te robe nada."
+    "b": "Texto a cámara",
+    "x": "¿Te suena?\n\nPuedes vender cuarenta mil euros al mes y seguir trabajando sin asignarte una remuneración.\n\nEntonces llega fin de mes, ves algo en la cuenta y dices: “Bueno, hemos ganado”.\n\nEspera. ¿Tu trabajo está pagado en esa cuenta?\n\nHaz un ejercicio: cuánto costaría poner a otra persona a hacer tus turnos y tus tareas. Inclúyelo al analizar el negocio.\n\nA partir de ahí, revisa dónde falta margen y dónde se está yendo el dinero. Puede ser producto, estructura o pagos que no coinciden con el mes.\n\nPero no des por rentable un restaurante porque tú trabajas gratis.\n\nHabla de esta cuenta con tu socio. Conviene que los dos estéis mirando lo mismo."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "El dinero no se te va de un golpe: se te va en un goteo que nadie está mirando. Esta semana, apunta la merma. Solo eso. Y sígueme, que de esto hablo todos los días."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Tu restaurante sale rentable… hasta que pones precio a tus horas»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J4",
-  "title": "Dos locales de Bilbao",
+  "title": "El local que factura menos",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Dos locales en Bilbao: uno factura el doble... y el otro gana el doble.",
-  "nota": "",
+  "gancho": "El bar de al lado factura menos que tú. Y puede estar ganando más.",
+  "nota": "rótulo “Ejemplo hipotético”. Se elimina la atribución a Bilbao y las cifras pendientes del original.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD — cifras tuyas: reales, redondas, en horquilla si dudas",
-    "x": "Os voy a poner un ejemplo real, sin nombres. El primero factura [CIFRA: p. ej. dos millones] al año: local lleno, terraza llena, [CIFRA: veintidós, veinticinco] personas de plantilla. El segundo factura la mitad con [CIFRA: diez, doce]. Y sin embargo, a final de año, el pequeño se lleva a casa casi el doble que el grande. ¿Por qué? Porque el grande tapa el caos metiendo horas y gente, y el pequeño tiene tres números controlados: lo que cuesta cada plato, lo que cuesta cada hora de trabajo y lo que deja cada mesa."
+    "b": "Texto a cámara",
+    "x": "Te pongo un ejemplo sencillo.\n\nUn local vende un millón al año y obtiene un tres por ciento de beneficio: treinta mil euros.\n\nOtro vende medio millón y obtiene un doce por ciento: sesenta mil.\n\nLa mitad de venta. El doble de beneficio. Con el mismo criterio de gastos en las dos cuentas, incluido el trabajo del dueño.\n\nPor eso, cuando alguien me dice “quiero abrir otro”, quiero ver antes cuánto deja el primero y qué necesita para funcionar.\n\nPorque abrir otro local también multiplica alquileres, decisiones y problemas pendientes.\n\nAntes de pensar cuántos restaurantes quieres, decide cuánto quieres ganar con ellos."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "La facturación se ve desde la calle. El margen se ve en el banco. Guárdate este vídeo para el día que te plantees abrir el segundo local."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Quieres facturar el doble o ganar más? Antes de abrir otro local, haz esta cuenta»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J5",
-  "title": "La queja",
+  "title": "La queja que empeoraste tú",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "",
-  "nota": "",
+  "gancho": "El filete salió pasado. La discusión de diez minutos la pusiste tú.",
+  "nota": "cuenta la escena, sin imitar al cliente de forma despectiva.",
   "blocks": [
    {
     "t": "",
-    "b": "NEGACIÓN EN SERIE, hook",
-    "x": "Nadie te clava una reseña de una estrella por un filete pasado. Ni por una comanda que tarda, ni porque el camarero nuevo se equivoque de mesa. Te la clavan por lo que hiciste después."
+    "b": "Texto a cámara",
+    "x": "El cliente te lo dice y empieza el interrogatorio: que si lo pidió así, que si ya ha comido la mitad, que si en cocina dicen que estaba bien.\n\nMientras tanto, tiene el plato delante y sigue sin comer a gusto.\n\nAcércate. Escucha qué ha pasado. Ofrece una solución concreta y di cuánto va a tardar.\n\nDespués comprueba si se ha resuelto. No desaparezcas en cuanto te llevas el plato.\n\nHabrá quejas injustas, claro. Pero una queja normal no necesita que ganes la discusión. Necesita que alguien se haga cargo.\n\nComéntalo hoy con tu equipo: ¿qué puede resolver cada uno sin venir a buscarte?"
    },
    {
     "t": "",
-    "b": "GIRO",
-    "x": "Porque el error no lo eliges, pero la respuesta sí. El cliente no recuerda el filete: recuerda si alguien fue a la mesa, le miró a la cara y se lo arregló."
-   },
-   {
-    "t": "",
-    "b": "REGLA",
-    "x": "Por eso la regla en mi casa es esta: la queja se atiende antes que la comanda. Siempre. El que se queja te da la oportunidad de arreglarlo. El que no se queja no vuelve, y lo cuenta en Google."
-   },
-   {
-    "t": "",
-    "b": "REMATE + CTA",
-    "x": "La queja bien atendida es la mejor mesa del día. Enséñale este vídeo a tu equipo antes del servicio."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Un plato se puede repetir. Lo que le dijiste al cliente ya lo ha oído»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J6",
-  "title": "El primer minuto",
+  "title": "El cliente invisible",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "La reseña de esta noche se decide en el primer minuto, antes de que salga un solo plato.",
-  "nota": "",
+  "gancho": "Hay un cliente en la puerta. Lo habéis visto tres. No lo ha saludado ninguno.",
+  "nota": "comenzar mirando un segundo hacia una puerta imaginaria y volver a cámara.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Un cliente entra y en sesenta segundos pasan tres cosas: alguien le mira o nadie le mira, alguien le dice \"ahora te atiendo\" o le deja plantado, y alguien le sienta bien o le suelta en la peor mesa. Todavía no ha probado nada y ya ha decidido con qué ojos va a mirar todo lo demás. Si ese minuto es bueno, te perdona que la comanda tarde. Si es malo, el mejor solomillo llega a una mesa que ya está en contra."
+    "b": "Texto a cámara",
+    "x": "Uno lleva platos. Otro está cobrando. El tercero piensa que ya se encarga alguien.\n\nY el cliente ahí, sin saber si tiene que esperar, entrar o irse.\n\nNo hace falta dejar una bandeja en el suelo. Muchas veces basta con mirarlo y decirle: “Buenas, enseguida estoy contigo”. Y después cumplirlo.\n\nAntes del servicio, dejad claro quién recibe y quién lo cubre cuando está ocupado.\n\nParece una tontería hasta que te pasa a ti: entras en un sitio, nadie te mira y ya empiezas incómodo.\n\nHoy observa la puerta cinco minutos. Te va a contar cosas del servicio que desde la barra no ves."
    },
    {
     "t": "",
-    "b": "REGLA + REMATE + CTA",
-    "x": "Y esto no es simpatía: es sistema. Quién recibe, qué dice y cuánto tarda. Se entrena antes del servicio, en cinco minutos. El cliente decide en la puerta y lo justifica con la comida. Guárdate este vídeo para la reunión de equipo."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Antes de que pruebe la comida, ya lo habéis dejado plantado en la puerta»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J7",
-  "title": "Servicio vs hospitalidad en un menú de 14 €",
+  "title": "El menú de catorce euros",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "El menú de catorce euros no compite en precio. Compite en cómo tratas a la gente.",
-  "nota": "",
+  "gancho": "En los dos bares el menú cuesta catorce euros. En uno, cuando entras, ya saben cómo tomas el café.",
+  "nota": "cercano, con una sonrisa leve. Evitar tono de lección de hospitalidad.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Porque servicio y hospitalidad no son lo mismo. Servicio es traer el plato caliente y a tiempo: eso lo hace cualquiera que haga bien su trabajo. Hospitalidad es que el cliente sienta que le estaban esperando: que le llames por su nombre, que te acuerdes de que no toma gluten, que le guardes su mesa de siempre. En tu calle todos dan de comer por catorce euros. El que llena todos los días no es el más barato: es aquel donde te reciben como a alguien de casa."
+    "b": "Texto a cámara",
+    "x": "No es lo único que decide dónde comes. Pero cuenta.\n\nComida buena, servicio ágil, precio razonable… Y además alguien se acuerda de ti.\n\nQue te pregunten si tienes prisa. Que recuerden la mesa que te gusta. Que no tengas que pedir el mismo vaso de agua cada día.\n\nSon detalles pequeños, pero el cliente los nota.\n\nEso sí: sin confianza forzada, sin invadir y sin dar nada por supuesto con alergias o necesidades alimentarias. Eso se confirma y se gestiona bien.\n\nPiensa en tus habituales. ¿Qué sabe tu equipo de ellos, aparte de lo que suelen gastar?\n\nAhí tienes una conversación para antes del servicio."
    },
    {
     "t": "",
-    "b": "REGLA + REMATE + CTA",
-    "x": "La regla es simple: cada mesa, un gesto. Uno. El plato lo paga el cliente. El gesto te lo devuelve la fidelidad. Sígueme, que de esto hablo todos los días."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Tus habituales vuelven por el menú o también por cómo los recibís?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J8",
-  "title": "El ratio de personal que casi todos calculan mal",
+  "title": "El ratio que mejora por arte de magia",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 45–55 s"
   ],
   "cifras": [],
-  "gancho": "El ratio de personal de tu local está mal calculado. Casi seguro.",
-  "nota": "",
+  "gancho": "Has sacado tu sueldo del coste de personal. El porcentaje ha mejorado. En el banco hay lo mismo.",
+  "nota": "dos columnas y el mismo importe moviéndose entre ellas. Sin presentar reclasificación como ahorro.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Y te digo por qué: porque estás metiendo tu sueldo de gestión dentro. Y la gestión no es coste de personal, es otra partida. Para saber si tu plantilla está bien dimensionada, la cuenta es esta: plantilla más extras, dividido entre lo que vendes. Solo eso. Con la gestión dentro, el número te sale inflado y tomas decisiones equivocadas: recortas camareros cuando el problema está en otro sitio."
+    "b": "Texto a cámara",
+    "x": "Puedes separar gestión y operación para entender mejor las cuentas. Pero mover un coste de columna no hace que desaparezca.\n\nSi trabajas en el restaurante, ese trabajo tiene un coste. Y si comparas meses, tienes que mantener el mismo criterio.\n\nPara revisar personal, cuenta remuneraciones, coste de empresa de la Seguridad Social y el resto de costes laborales que correspondan. Compáralos con las ventas sin IVA.\n\nY si quieres mirar solo el equipo operativo, perfecto: separa la gestión, pero enséñala también.\n\nLo que no vale es decir que has ahorrado porque ahora una parte está en otra pestaña.\n\nRevisa eso antes de celebrar que el ratio ha bajado."
    },
    {
     "t": "",
-    "b": "CIFRA",
-    "x": "Y una referencia para situarte: en torno al treinta por ciento, respiras. Por encima del treinta y cinco, tienes un problema que no se arregla metiendo más horas tú."
-   },
-   {
-    "t": "",
-    "b": "REMATE + CTA",
-    "x": "Haz la cuenta esta semana con los números del mes pasado. Plantilla más extras, entre lo vendido. Y guárdate este vídeo para hacerla."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Bajar un porcentaje en Excel no siempre significa gastar menos»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J9",
-  "title": "Me escribió un hostelero (cap. 2): queremos aumentar ventas",
+  "title": "Queremos más ventas",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Me escribió un hostelero. Tres palabras: queremos aumentar ventas.",
-  "nota": "",
+  "gancho": "“Estamos llenos y no llegamos. Vamos a meter publicidad”. Espera: ¿dónde vas a sentar a los que vengan?",
+  "nota": "situación ilustrativa, sin atribuirla al asador de Burgos sin recuperar la consulta.",
   "blocks": [
    {
     "t": "",
-    "b": "LECTURA, leyendo el móvil",
-    "x": "Un asador familiar en Burgos. Me dice: el local va bien de gente, pero no llegamos. Queremos aumentar ventas. ¿Hacemos publicidad?"
+    "b": "Texto a cámara",
+    "x": "Si el problema es el viernes por la noche, meter más gente puede complicar un servicio que ya va justo.\n\nA lo mejor necesitas llenar el martes. O mejorar lo que deja cada mesa. O dejar de gastar tanto para servir lo que ya vendes.\n\nAntes de lanzar una campaña, decide qué servicio quieres mover, cuánta capacidad tienes y qué margen deja esa venta adicional.\n\nLa publicidad puede ayudar. Pero dale un trabajo concreto.\n\n“Vender más” es demasiado amplio. “Llenar diez mesas el martes con una oferta que deja margen” ya te permite hacer cuentas.\n\n¿Qué servicio de tu semana necesita realmente más clientes?"
    },
    {
     "t": "",
-    "b": "RESPUESTA, a cámara",
-    "x": "Pues os voy a decir una cosa: antes de meter un euro en publicidad, mira cuánto te queda de lo que ya vendes. Porque si tu margen está roto, vender más es repetir la pérdida más veces. Un local lleno que no llega a fin de mes no tiene un problema de ventas: tiene un problema de escandallo, de merma o de horas. Primero se arregla la cuenta de dentro. Después, y solo después, se llena más el comedor."
-   },
-   {
-    "t": "",
-    "b": "REMATE + CTA",
-    "x": "Querer vender más no es un plan. Saber cuánto te deja cada venta, sí. Si tienes un local y quieres que responda el tuyo, cuéntamelo por DM."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Necesitas más clientes o necesitas que los que ya tienes dejen más margen?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J10",
-  "title": "El mes que descubrí 1.200 € de merma (confesional)",
+  "title": "Lo que cabe en un cubo",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Un mes descubrí mil doscientos euros de merma en mi propia cocina. Mía. Con veinte años de oficio.",
-  "nota": "",
+  "gancho": "¿Tirarías un billete de veinte euros? Pues ponle precio a lo que has tirado hoy en cocina.",
+  "nota": "hoja y recipiente limpio como apoyo. No afirmar que tú perdiste 1.200 € si no está documentado.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Y no era robo, ni un desastre de cámara. Era el goteo de siempre: el perejil que se seca, la nata abierta del viernes, el pan que sobra, la ración que se monta grande. Nada de eso sale en ninguna cuenta, pero lo había pagado yo. ¿Cómo lo descubrí? Con un cuaderno en cocina: todo lo que se tira, apuntado con producto y cantidad. La primera semana ya dolía. Al mes, mil doscientos euros."
+    "b": "Texto a cámara",
+    "x": "El pan que sobró. La nata que se quedó abierta. Esa preparación que hiciste de más “por si acaso”.\n\nPor separado parece poco. Junto, hay que verlo.\n\nPon una hoja donde se tira el producto. Apuntad qué era, cuánto, por qué y su coste.\n\nSin montar una bronca cada vez que alguien anota algo. Como apuntarlo traiga problemas, la hoja se queda limpia y el cubo sigue lleno.\n\nAl final de la semana mira qué se repite. Y corrige una causa: compra, conservación o cantidad preparada.\n\nAntes de pedir al proveedor que te baje veinte euros, mira cuántos acaban en la basura."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Lo que se tira no aparece en ninguna factura, pero lo has pagado tú. Pon el cuaderno esta semana y luego me cuentas. Sígueme, que de esto hablo todos los días."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Como riñas al que apunta la merma, vas a conseguir una hoja vacía»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J11",
-  "title": "Proveedores: la culpa era mía",
+  "title": "El proveedor de toda la vida",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Llevaba años pagando de más a mis proveedores. Y la culpa no era suya: era mía.",
-  "nota": "",
+  "gancho": "“Es mi proveedor de toda la vida”. Bien. ¿Cuándo comparaste su precio por última vez?",
+  "nota": "dos ofertas anonimizadas o ficticias claramente rotuladas.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Porque nunca comparaba. Al proveedor de toda la vida no se le discute, se le paga. Hasta que un día pedí precio del mismo género a otros dos... y el mismo lomo tenía tres precios distintos en la misma calle. Desde entonces, dos reglas: dos proveedores por familia de producto, siempre. Y los precios se revisan cada temporada, no cuando me acuerdo. Y ojo, esto no es pelearse con nadie: es preguntar. En carne y pescado, un cinco por ciento de la compra son cientos de euros al mes."
+    "b": "Texto a cámara",
+    "x": "Tener confianza vale mucho. Que responda cuando falla algo, también.\n\nPero puedes valorar eso y revisar lo que estás pagando.\n\nCoge uno de los productos que más compras y pide otra oferta. Del mismo producto: calidad, corte, calibre, formato, entrega. Que luego comparamos cosas distintas y celebramos un ahorro que no existe.\n\nY mira el rendimiento. El más barato por kilo puede dejarte menos raciones.\n\nCon eso delante, habla con tu proveedor. Puede que siga siendo la mejor opción. O puede que haya algo que revisar.\n\nLa relación de años no debería impedir una conversación sobre precios."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Esta semana, pide precio a un segundo proveedor de tu partida más gorda. Con eso empiezas. Sígueme, que de números hablo todos los días."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Ese producto más barato, ¿te está dando las mismas raciones?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J12",
-  "title": "Tres cierres de caja sin saber si ganaste",
+  "title": "La caja cuadró",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Tres cierres de caja seguidos sin saber si habías ganado dinero. Yo he estado ahí.",
-  "nota": "",
+  "gancho": "La caja cuadró al céntimo. De si ganaste dinero, todavía no sabemos nada.",
+  "nota": "hoja breve. No vender este registro como una cuenta diaria exacta de resultados.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Porque la caja llena engaña. La caja te dice cuánto entró, no cuánto ganaste. Hasta que no le restas el género, las nóminas, el alquiler y la luz, ese montón de billetes no significa nada. Y esa cuenta casi nadie la hace a diario. La solución cabe en un papel: cada noche, cuatro números. Lo vendido, lo comprado hoy, las horas trabajadas y una línea de incidencias. Cinco minutos con el local ya cerrado."
+    "b": "Texto a cámara",
+    "x": "Cerrar caja te confirma que los cobros encajan. Para saber qué deja el negocio hacen falta más cuentas.\n\nPero puedes empezar esta noche con un registro sencillo: ventas, horas trabajadas, desperdicio e incidencias importantes.\n\nEl pedido que llegó lo registras también. Lo que no haces es tratar todo lo comprado hoy como si te lo hubieras comido hoy.\n\nCon ese seguimiento detectas días raros y preguntas mejor: por qué hubo tantas horas, qué se repitió, qué se tiró.\n\nDespués cierras el mes con inventario y gastos completos.\n\nGuarda el vídeo y prueba esta noche. Que la caja cuadre está bien. Ahora toca entender el servicio."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Un mes con ese papel y sabrás de tu negocio más que en el último año entero. Guárdate este vídeo para el cierre de esta noche."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Cierras caja o estás calculando beneficio? Porque no es la misma cuenta»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J13",
-  "title": "Chick-fil-A cierra los domingos",
+  "title": "El descanso pendiente",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "La cadena de pollo más rentable de Estados Unidos cierra todos los domingos. Y aun así vende más por local que McDonald's.",
-  "nota": "",
+  "gancho": "“Descansamos cuando baje el trabajo”. ¿Eso cuándo es, exactamente?",
+  "nota": "se sustituye la comparación con Chick-fil-A por una escena propia del sector sin estadísticas externas.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Se llama Chick-fil-A. Cierra uno de cada siete días y factura por restaurante más que nadie. ¿Y cómo puede ser? Equipos que descansan, gente que no se va, servicio que no falla. La rotación baja se paga sola. ¿Y qué copiaría yo para un bar de aquí? No el cerrar en domingo: el proteger el descanso. Cuadrantes que se cumplen, dos días seguidos de libranza cuando se pueda, y el festivo trabajado, devuelto."
+    "b": "Texto a cámara",
+    "x": "Porque después del puente viene un grupo. Luego una baja. Luego la terraza.\n\nY si el descanso depende de que no pase nada, nunca llega el día.\n\nCuando hagas el cuadrante, cuenta también con que la gente necesita recuperarse y organizar su vida.\n\nPublica con antelación, reduce los cambios de última hora y revisa qué servicios te obligan siempre a tirar de los mismos.\n\nPuede que falte cobertura. Puede que estés abriendo una franja que apenas aporta. Hay que mirarlo.\n\nLo que no puedes hacer es presupuestar el mes suponiendo que todos van a aguantar un poco más.\n\nMira el próximo cuadrante: ¿se sostiene o vuelve a depender de favores?"
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Un equipo descansado te vende más que una hora extra. Guárdalo para cuando hagas el cuadrante de agosto."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Tu cuadrante funciona o funciona porque siempre hay alguien que te hace un favor?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J14",
-  "title": "Mercadona: cuatro semanas antes de tocar caja",
+  "title": "El primer viernes del nuevo",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Mercadona no deja a nadie tocar una caja sin cuatro semanas de formación. En hostelería metemos al nuevo un viernes por la noche.",
-  "nota": "",
+  "gancho": "Primera noche. Restaurante lleno. “Tú pregunta lo que no sepas”. ¿A quién? Si vais todos corriendo.",
+  "nota": "sin referencia a las cuatro semanas de Mercadona, no acreditadas en el original.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Y luego nos quejamos de que el chaval falla. Pues claro que falla: nadie le ha enseñado la carta, ni las mesas, ni el TPV, ni quién manda en el pase. Y cada fallo suyo lo paga tu servicio entero: comandas mal metidas, ritmo roto, cliente quemado. No te hacen falta cuatro semanas como a Mercadona. Te hacen falta dos días con método: un día de carta y TPV, un día de sala pegado al mejor que tengas."
+    "b": "Texto a cámara",
+    "x": "El nuevo mira el TPV, busca la mesa, pregunta por una salsa… y cada duda llega en el peor momento.\n\nAntes de ese servicio, enséñale lo básico del puesto. Que practique una comanda. Que localice las mesas. Que sepa qué dudas tiene que consultar y con quién.\n\nY esa noche asígnale un trabajo que pueda hacer con apoyo. Ya habrá tiempo de ampliarlo.\n\nNo todos necesitan los mismos días. Comprueba lo que sabe hacer, no solo cuánto lleva contratado.\n\nSi el viernes va a ser complicado, su preparación empieza antes del viernes.\n\nGuárdalo para la próxima incorporación."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "El nuevo no te sale caro por su nómina: te sale caro sin formar. Guárdalo para la próxima incorporación."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Le has dicho que pregunte. No le has dejado a nadie disponible para responder»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J15",
-  "title": "La pregunta del cajero de Trader Joe's",
+  "title": "La pregunta que ayuda a vender",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 35–45 s"
   ],
   "cifras": [],
-  "gancho": "Hay un supermercado americano donde el cajero te pregunta qué vas a cenar. Y esa pregunta vale millones.",
-  "nota": "",
+  "gancho": "“¿Algo más?” es la pregunta que haces cuando ya no sabes qué ofrecer.",
+  "nota": "sustituye la anécdota de Trader Joe's sin atribuirle resultados económicos no acreditados.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Se llama Trader Joe's, y entrena a su gente para conversar en caja: qué plan tienes, prueba esto con aquello. No es simpatía: es una pregunta diseñada, entrenada y repetida. ¿Y la versión de un restaurante de aquí? El camarero que pregunta \"¿lo queréis para compartir?\" o \"¿os saco unas croquetas mientras miráis la carta?\". Una pregunta por puesto, decidida antes del servicio. No diez: una."
+    "b": "Texto a cámara",
+    "x": "Tienes una mesa mirando la carta. En vez de soltarla por costumbre, entiende qué necesitan.\n\n“¿Vais a compartir?”. “¿Tenéis prisa?”. “¿Queréis algo para picar mientras elegís?”.\n\nLa respuesta te permite recomendar con sentido. A lo mejor necesitan un entrante rápido. A lo mejor ya han pedido de sobra.\n\nNo se trata de colocarle otra ración a quien no la quiere. Se trata de que el camarero conozca la carta y ayude a decidir.\n\nAntes del servicio, elegid una recomendación útil y explicad cuándo ofrecerla.\n\n¿Qué pregunta os ayuda de verdad a atender mejor una mesa?"
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Una pregunta bien entrenada factura más que la pizarra de ofertas. Decide la de tu casa hoy en el briefing y enséñale este vídeo a tu equipo."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Tu camarero conoce la carta. ¿Sabe qué recomendar y a quién?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J16",
-  "title": "La cuenta de una baja",
+  "title": "Ya vendrá otro",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Cada camarero que se te va te cuesta más de mil euros. Aunque no lo veas en ninguna factura.",
-  "nota": "",
+  "gancho": "“Si se va, ya vendrá otro”. Sí. Y hasta que aprenda, ¿quién hace su trabajo?",
+  "nota": "no usar el 60 % de rotación ni un coste fijo por sustitución sin datos propios.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Haz la cuenta conmigo: el anuncio y las entrevistas, tus horas. Las semanas de rodaje a medio ritmo. Los errores del nuevo, que los paga el cliente. Y el equipo, cargando el hueco mientras tanto. En España la rotación en hostelería pasa del sesenta por ciento: es la sangría más cara del oficio y no sale en ningún papel. Y retener no siempre es pagar más: es cuadrante estable, descanso que se respeta y saber a quién respondes."
+    "b": "Texto a cámara",
+    "x": "Tú haciendo entrevistas. El encargado enseñando. El equipo cubriendo el hueco.\n\nLuego llegan las dudas, los errores de aprendizaje y las semanas hasta que esa persona puede trabajar con autonomía.\n\nPonle horas y coste a todo eso. Aunque no recibas una factura que diga “cambio de camarero”.\n\nNo todas las salidas se pueden evitar. Y a veces cambiar es necesario.\n\nPero si se te va gente por el mismo motivo una y otra vez, contratar es solo volver al principio.\n\nPregunta por qué se van. Y comprueba si estás haciendo algo para corregirlo.\n\nHabla de esto antes de publicar otra vez la misma oferta."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Sustituir es más caro que cuidar. Guárdate este vídeo para la próxima vez que pienses \"ya vendrá otro\"."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Cuántas veces has publicado este año la misma oferta de camarero?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J17",
-  "title": "La escena de The Bear que explica el pase",
+  "title": "Cinco voces en el pase",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 35–45 s"
   ],
   "cifras": [],
-  "gancho": "Hay una escena de The Bear que explica el pase mejor que cualquier curso. Te la cuento.",
-  "nota": "",
+  "gancho": "Si cinco personas cantan comandas a la vez, a la sexta ya no la escucha nadie.",
+  "nota": "se retira la escena no identificada de The Bear. El conflicto se entiende sin recurrir a la serie.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "La cocina es un caos: gritos, platos que vuelven, todo el mundo corriendo y nadie avanzando. ¿Y qué lo arregla? No es correr más. Es que cada uno tenga su puesto y una sola voz cante la comanda. Oído. Y eso no es cosa de estrellas Michelin: en un bar de menús pasa igual. Quién canta la comanda, quién monta el plato, quién lo saca. Tres papeles con nombre. Cuando eso existe, el mismo equipo que ayer se gritaba, hoy fluye."
+    "b": "Texto a cámara",
+    "x": "Uno pregunta por la ocho. Otro adelanta la doce. Sala reclama la cuatro y cocina empieza tres cosas que todavía no hacían falta.\n\nAl final todos corren y nadie sabe qué sale primero.\n\nAntes del servicio, dejad claro quién ordena el pase, cómo se comunican los cambios y quién confirma lo que falta.\n\nY mantenedlo cuando venga el lío. Porque si cada urgencia cambia el orden por su cuenta, volvéis al principio.\n\nPrueba a observar un servicio: ¿cuántas personas están dando instrucciones distintas sobre la misma comanda?\n\nAhí tienes algo concreto que corregir mañana."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Veinte años de pase me han enseñado lo mismo que esa escena: el caos no se arregla corriendo, se arregla cantando. Sígueme, que de esto hablo todos los días."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Quién manda en tu pase cuando empiezan las prisas?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J18",
-  "title": "El cliente difícil no se gestiona con paciencia",
+  "title": "El cliente que levanta la voz",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "El cliente difícil no se gestiona con paciencia. Se gestiona con sistema.",
-  "nota": "",
+  "gancho": "Un cliente levanta la voz y tu camarero nuevo te busca con la mirada. ¿Sabe que vas a ayudarle?",
+  "nota": "firme, sin convertir al cliente en enemigo ni prometer resolver cualquier conflicto.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Porque tu camarero nuevo no puede improvisar delante de uno que viene a discutir. En mi casa la regla tiene tres pasos y se sabe antes del servicio. Uno: se escucha entero, sin interrumpir y sin justificarse. Dos: si la cosa sube, va el de los galones: el encargado o el dueño, no el chaval. Y tres: el equipo sabe hasta dónde puede decidir. Si puede invitar a un café para cerrar un mal trago, que lo sepa antes del servicio, no durante."
+    "b": "Texto a cámara",
+    "x": "Esa respuesta debería tenerla antes de que pase.\n\nEl equipo necesita saber quién se hace cargo, qué puede resolver cada persona y cuándo tiene que avisar.\n\nPrimero, escuchar el problema sin entrar al choque. Después, ofrecer una solución que pueda cumplir. Y si la situación escala, que intervenga el responsable.\n\nAtender una queja no obliga a aguantar insultos. Ese límite también tiene que estar claro.\n\nNo le digas simplemente “ten paciencia”. Explícale qué hacer y respáldalo cuando lo haga.\n\nAntes del próximo servicio, dedica cinco minutos a una pregunta: ¿qué hacemos aquí cuando un cliente se pone así?"
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Al difícil no se le gana discutiendo: se le gana teniendo un plan. Enséñale este vídeo a tu equipo antes del próximo turno."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "“Ten paciencia” no es suficiente cuando están gritando a tu camarero»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J19",
-  "title": "Tu local no falla por malo: falla por irregular",
+  "title": "Depende de quién esté",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Tu local no está fallando por malo. Está fallando por irregular.",
-  "nota": "",
+  "gancho": "“Aquí se come muy bien… depende de quién esté”. Esa segunda parte te debería preocupar.",
+  "nota": "el problema es la dependencia, no señalar o ridiculizar a un cocinero.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "El martes bordas el servicio y el viernes se te cae. Y el cliente no vuelve al sitio del martes: deja de volver por el viernes. La regularidad no es suerte, se fabrica con tres cosas: ficha de cada plato, para que salga igual lo haga quien lo haga. Pase definido, para que el ritmo no dependa de quién trabaje hoy. Y briefing de cinco minutos antes de cada servicio. Lo brillante trae la primera visita; lo regular trae todas las demás."
+    "b": "Texto a cámara",
+    "x": "El martes, una ración. El sábado, otra. Con uno sale rápido; con otro, cada mesa espera algo distinto.\n\nY el cliente no sabe a quién le tocaba trabajar. Solo sabe que la última vez estuvo mejor.\n\nEmpieza por lo que más se repite: tus platos más vendidos, la preparación antes de abrir y la organización del pase.\n\nDeja claro cómo deben salir y compruébalo en servicios distintos. No basta con escribir una ficha y guardarla.\n\nSi algo solo funciona cuando está una persona concreta, identifica qué hace esa persona y enséñaselo al resto.\n\n¿Qué cambia demasiado en tu restaurante según quién esté de turno?"
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "No busques el mejor servicio de tu vida: busca el mismo servicio todos los días. Sígueme, que de esto hablo todos los días."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "El cliente ha recomendado tu restaurante. Ahora cruza los dedos para que esté el cocinero bueno»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J20",
-  "title": "Tu mejor camarero no se va por el sueldo",
+  "title": "Al bueno le cae otra mesa",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 40–50 s"
   ],
   "cifras": [],
-  "gancho": "Tu mejor camarero no se va por el sueldo. Se va por aguantar al que trabaja mal a su lado.",
-  "nota": "",
+  "gancho": "Tu mejor camarero termina sus mesas. ¿Y qué premio tiene? Las del que no ha hecho su parte.",
+  "nota": "tono reflexivo. Sin etiquetar a personas como “flojos” ni negar el papel del sueldo en la retención.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Piénsalo: el bueno llega puntual, saca sus mesas y encima tapa los agujeros del flojo. Y si al flojo no le pasa nada, el mensaje que recibe el bueno es que aquí da igual hacerlo bien. Cada turno que el flojo sale gratis, el bueno actualiza el currículum. Pedir cuentas no es montar una bronca: es que el trabajo mal hecho tenga una conversación esa misma semana. A solas, con hechos y con fecha para corregirlo."
+    "b": "Texto a cámara",
+    "x": "Un día, normal. Nos ayudamos todos.\n\nPero todos los días, con la misma persona, ya es otra cosa.\n\nEl que cumple empieza a entender que cuanto mejor trabaja, más trabajo le cae. Y que tú lo ves, pero no intervienes.\n\nMira qué está pasando con quien no llega. Puede faltarle formación, puede estar mal organizado o puede no estar cumpliendo. No se corrige todo de la misma manera.\n\nHabla con hechos, acuerda qué tiene que cambiar y haz seguimiento.\n\nTu mejor trabajador también necesita ver que repartes la carga con criterio.\n\nQue sea bueno no significa que pueda con todo."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "Al bueno se le cuida pidiéndole cuentas al flojo. Guárdate este vídeo para antes de hacer el próximo cuadrante."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "¿Estás cuidando al que más trabaja o te estás acostumbrando a que lo saque todo?»."
    }
   ]
  },
  {
-  "grupo": "Julio · talking heads",
+  "grupo": "Julio · 21 guiones actualizados",
   "id": "J21",
-  "title": "El asador que bajó personal del 38 al 31",
+  "title": "El porcentaje que bajó",
   "meta": [
-   "Sesión de julio, aprobado 27-jul-2026"
+   "Duración orientativa: 45–55 s"
   ],
   "cifras": [],
-  "gancho": "Un asador bajó su gasto de personal del treinta y ocho al treinta y uno por ciento de la venta. Sin despedir a nadie.",
-  "nota": "",
+  "gancho": "Bajar personal del treinta y ocho al treinta y uno por ciento suena bien. Ahora dime cómo ha bajado.",
+  "nota": "los porcentajes se usan como situación a analizar, sin afirmar un caso real del norte no documentado.",
   "blocks": [
    {
     "t": "",
-    "b": "BUILD",
-    "x": "Un caso real del norte. ¿Y cuál fue la palanca? No fue echar gente: fue cuadrar horas con venta. Cuadrantes por franjas, porque no necesitas el mismo equipo un martes a las cinco que un sábado a las dos. Extras solo cuando hay reserva que los pague. Y la gestión, fuera del ratio, que esa es otra partida. Siete puntos sobre la venta, en un local normal, son decenas de miles de euros al año. Sin tocar la calidad y sin quemar a nadie."
+    "b": "Texto a cámara",
+    "x": "Porque puede haber más ventas con las mismas horas. Puede haber menos gasto. O puede que hayas movido la gestión a otra partida.\n\nEl porcentaje baja en los tres casos. No significa lo mismo.\n\nCuando compares, mira euros, horas, ventas y calidad del servicio. Con el mismo criterio en ambos periodos.\n\nSi has ajustado solapes sin dejar el pase descubierto, hay una mejora que medir. Si simplemente trabajas tú todas las horas que faltan, inclúyelas en la cuenta.\n\nY si solo has cambiado un coste de sitio, no lo presentes como ahorro.\n\nAntes de celebrar un porcentaje, comprueba qué ha cambiado realmente en el restaurante."
    },
    {
     "t": "",
-    "b": "REMATE + CTA",
-    "x": "El personal no se recorta: se cuadra. Guárdate este vídeo para hacer tus cuadrantes por franjas."
+    "b": "Gancho alternativo · segunda entrada, no se lee seguido",
+    "x": "Tu ratio de personal ha bajado. ¿También ha bajado el trabajo que haces tú gratis?»."
    }
   ]
  }
